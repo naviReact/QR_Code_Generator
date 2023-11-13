@@ -1,0 +1,103 @@
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="color"] {
+    width: 90%;
+    height: 100%;
+    padding: 13px 12px;
+    border: 1px solid #CACACA;
+    margin: 5px 0;
+    border-radius: 8px;
+    color: #2A354F;
+}
+
+input[type="text"],
+[type="file"]:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    border-bottom-width: 2px;
+}
+
+.accordion {
+    margin: 10px 0;
+    border: 1px solid #CACACA;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+.accordion-content input[type="color"] {
+    width: 100%;
+}
+
+/* Hover effect for accordion content */
+.accordion-label:hover {
+    background-color: #e0e0e0;
+}
+
+.container .generate_qr button {
+    width: 100%;
+    background-color: #9cd375;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #84c45c;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.outputContainer {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+.outputImageContainer {
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.outputImage {
+    max-width: 100%;
+}
+
+#error {
+    color: red;
+    margin-top: 5px;
+}

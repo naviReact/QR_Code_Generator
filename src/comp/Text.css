@@ -1,0 +1,37 @@
+/* .textarea{
+    width: 100%;
+    height: 100vh;
+} */
+
+
+
+
+/* Add your custom styling here */
+/* Add your custom styling here */
+
+.accordion {
+    margin-bottom: 10px;
+  }
+  
+    .accordion-label {
+    background-color: #eee;
+    padding: 10px;
+    cursor: pointer;
+    width: fit-content;
+    text-align: left;
+  }
+  
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+.accordion-input:checked + .accordion-label + .accordion-content {
+    display: block;
+  }
+  
+.accordion.open .accordion-input:checked + .accordion-label {
+    background-color: #ddd;
+  }
+  

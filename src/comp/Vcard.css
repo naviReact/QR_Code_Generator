@@ -1,0 +1,77 @@
+
+  
+
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  input[type="color"] {
+    width: 100%;
+    height: 100%;
+    padding: 0 200px;
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    border: 1px solid #CACACA;
+    padding: 20px 20px;
+    /* padding: 10px; */
+    margin: 5px 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 12px;
+    /* color: #6b6b6b; */
+  }
+  input[type = "text"],[type = "file"]:focus{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    border-bottom-width: 2px;
+  }
+  
+  .container .generate_qr button{
+    background-color: #9cd375;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background-color: #84c45c;
+    transition: all 0.3s ease;
+    
+  }
+  /* button:active{
+    transform: scale(0.99);
+  } */
+  
+  .outputContainer {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .outputImageContainer {
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
+    
+  }
+  
+  .outputImage {
+    max-width: 100%;
+    outline: 1px solid black;
+  }
+  
+ 
+    
+    
+
+  

@@ -1,0 +1,253 @@
+/* Qr.css */
+
+.container-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.qr-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.alag {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.output-div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.preview {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.preview-continer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qu_div_image_generated {
+  max-width: 100%;
+  height: auto;
+}
+
+.test_qr_download {
+  margin-top: 20px;
+}
+
+/* Add media queries for responsiveness */
+@media only screen and (min-width: 768px) {
+  .container-qr {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .qr-links {
+    justify-content: flex-start;
+  }
+
+  .output-div {
+    width: 70%; /* Adjust the width as needed */
+  }
+
+  .preview {
+    width: 30%; /* Adjust the width as needed */
+  }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    flex-direction: column;
+    /* background: linear-gradient(to bottom, #175d69 23%, #330c43 95%); */
+}
+
+.container-qr {
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 50%;
+    /* min-height: 60vh; */
+    /* background-color: #f4f4f4; */
+    background: rgb(243, 247, 250);
+    
+    padding: 50px;
+    margin-top: 5rem;
+    border-radius: 4px;
+    margin-left: -12rem;
+    margin-top: -1rem;
+
+
+}
+
+section .container-wrapper{
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #e9ecef;
+  height: 167px;
+  /* position: relative; */
+  width: 571px;
+  flex-direction: row;
+}
+.qr-links{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.output-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .container-wrapper .qr-links {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    left: 0;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+}
+
+
+
+
+
+/* Main Links are style */
+
+
+
+section .container-wrapper .alag{
+    flex-direction: column;
+    justify-content: flex-start;
+    /* margin-top: 43px; */
+    margin-right: 0.68rem;
+    
+}
+
+
+section .container-wrapper .alag:hover{
+   
+    color: #11ab7c;
+    transition: 0.5s linear;
+}
+
+
+section .qr-links a{
+    
+    cursor: pointer;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 2px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;   
+    /* border-bottom: 1px solid rgb(0, 0, 0,0.15); */
+    /* padding: 12px; */
+    
+    
+    border-radius: 2px;
+}
+
+
+
+
+.preview{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 4rem;
+    margin-right: 15.22rem;
+    width: 16%;
+    display: grid;
+    flex-direction: column;
+
+}
+ 
+.preview-continer{
+    background-color: white;
+    padding: 50px;
+    min-width: 320px;
+    min-height: 60vh;
+    margin-top: 2rem;
+    border-radius: 4px;
+    outline: 1.45px solid rgb(0,0,0,0.35);
+
+    
+}
+
+.preview-continer img{
+    display: block;
+    margin: auto;
+    /* outline: 1px solid rgb(0, 0, 0,0.45);
+    border-radius: 5px; */
+    
+}
+
+
+.preview-continer .test_qr_download button:hover{
+    background-color: #e9ecef;
+    background-color: rgb(69,56,202);
+    color: black; 
+
+}
+
+
+.preview-continer .test_qr_download button:active{ 
+    transform: scale(0.99);
+
+}
+
+
+
+
+
+@media (max-width:1300px) {
+    .preview{
+        display: flex;
+        
+
+    } 
+    .preview-continer{
+        flex-grow: 1;
+        flex-direction: column;
+        background-color: rebeccapurple;
+    } 
+
+}

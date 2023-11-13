@@ -1,0 +1,93 @@
+/* .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+} */
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+label[for="email"] {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 537.813px;
+    height: 48.202px;
+    padding: 13.106px 12.006px 13.096px 11.996px;
+    border-radius: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    
+}
+
+label[for="subject"],
+label[for="message"] {
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.container button {
+
+    background-color: #9cd375;
+    color: white;
+    border: none;
+    padding: 16px 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1.67rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #84c45c;
+    transition: all 0.3s ease;
+
+}
+
+/* button:active{
+    transform: scale(0.99);
+  } */
+
+.outputContainer {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+.outputImageContainer {
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.outputImage {
+    max-width: 100%;
+}
+
+
+.preview-continer .generate_qr button:hover {
+    background-color: #84c45c;
+    color: black;
+}
