@@ -158,38 +158,36 @@ section .qr-links a{
 }
 
 
+/* preview media quries  */
 
 
 
-/* ... (previous styles) ... */
-
-/* Media queries for responsiveness */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
     section {
-        flex-direction: column; /* Display items vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .container-qr {
-        margin-top: 2rem; /* Adjust as needed */
+        margin-top: 2rem; 
     }
 
     .preview {
-        margin-top: 2rem; /* Adjust as needed */
+        margin-top: 2rem; 
     }
 
     .preview-continer {
         flex-grow: 1;
-        background-color: #f4f4f4; /* Use a color that fits your design */
+        background-color: #f4f4f4; 
     }
 }
 
-/* Additional media query for smaller screens */
+
 @media (max-width: 768px) {
     .preview {
-        flex-direction: column; /* Adjust based on your layout */
-        margin-right: 0; /* Remove right margin */
-        margin-top: 2rem; /* Adjust as needed */
+        flex-direction: column; 
+        margin-right: 0; 
+        margin-top: 2rem; 
     }
-}
+} */
 

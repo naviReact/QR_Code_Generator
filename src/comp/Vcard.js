@@ -1,6 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef , useState} from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
+import cancel_image from '../User Image/cancel_image.png';
+import image from '../User Image/06-vcard.png';
 
 function VCardQRCodeGenerator() {
   const nameRef = useRef(null);
@@ -16,6 +18,9 @@ function VCardQRCodeGenerator() {
   const logoInputRef = useRef(null);
   const foregroundColorRef = useRef(null);
   const backgroundColorRef = useRef(null);
+
+  const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
+  const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
   const generateVCardQRCode = () => {
     const name = nameRef.current.value;
@@ -85,6 +90,13 @@ END:VCARD`;
 
     SetDownloadImageName("vcard");
   };
+  const toggleFileAccordion = () => {
+    setFileAccordionOpen(!fileAccordionOpen);
+  };
+
+  const toggleColorAccordion = () => {
+    setColorAccordionOpen(!colorAccordionOpen);
+  };
 
   return (
     <div className="container">
@@ -118,15 +130,69 @@ END:VCARD`;
 
       <label htmlFor="country">Country:</label>
       <input type="text" id="country" ref={countryRef} placeholder="" />
+      
 
-      <label htmlFor="logoInput">Choose Logo:</label>
+
+      <div className='test_acc'>
+
+    
+      <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleFileAccordion}>
+          <span ><i className={'far fa-image'}></i> Logo</span>
+          <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content">
+          <span>Or choose here logo</span>
+          <div className='grid-container'>
+
+            <div className='box-child'><img src={cancel_image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            
+          </div>
+          <div><img src=''></img></div>
+          <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+          <input type="file" id="logoInput" ref={logoInputRef} />
+        </div>
+      </div>
+
+      {/* Accordion for Color Section */}
+      <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleColorAccordion}>
+          <span><i className={'fa fa-cog'}></i>Color</span>
+          <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content"> 
+          <label htmlFor="foregroundColor">Foreground Color:</label>
+          <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+
+          <label htmlFor="backgroundColor">Background Color:</label>
+          <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+        </div>
+      </div>
+    </div>
+
+
+
+      
+
+      
+
+
+
+      {/* <label htmlFor="logoInput">Choose Logo:</label>
       <input type="file" id="logoInput" ref={logoInputRef} />
 
       <label htmlFor="foregroundColor">Foreground Color:</label>
       <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
 
       <label htmlFor="backgroundColor">Background Color:</label>
-      <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+      <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} /> */}
 
       <button onClick={generateVCardQRCode} className='generate_qr'><i className='fa fa-plus' style={{marginRight: '0.78rem', fontWeight:'900',}}></i>Generate QR Code</button>
       

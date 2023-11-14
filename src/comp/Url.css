@@ -147,14 +147,21 @@ line-height: 22.4px; /* 140% */
 
 .accordion-content .grid-container .box-child{
   background-color: #f1f1f1;
-  padding: 17px;
+  padding: 15px;
   border: 1px solid #ddd;
+  border-radius: 8px;
   text-align: center;
 }
 
 .accordion-content .grid-container .box-child img{
-  max-width: 64px;
-  height: 64px;
+  max-width: 50px;
+  height: 50px;
+}
+
+
+.accordion-content .grid-container .box-child:hover{
+  border: 1px solid #84c45c;
+  /* transition: all 0.5s ease; */
 }
 
 
