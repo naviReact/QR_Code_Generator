@@ -3,8 +3,8 @@ import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 
 // Import Font Awesome icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function WifiQRCodeGenerator() {
   const ssidRef = useRef(null);
@@ -116,7 +116,7 @@ function WifiQRCodeGenerator() {
           className="show-hide-button"
           onClick={togglePasswordVisibility}
         >
-          <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+          {/* <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} /> */}
         </button>
       </div>
 
