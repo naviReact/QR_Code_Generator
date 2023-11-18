@@ -1,8 +1,12 @@
 
   
-
+/* 
   h2 {
     margin-bottom: 20px;
+  } */
+
+  .container h2 .text-center{
+    color: #84c45c;
   }
   
   label {

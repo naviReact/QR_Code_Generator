@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import './Email.css'; // You can create a CSS file for styling
+import cancel_image from '../User Image/cancel_image.png';
+import image from '../User Image/06-vcard.png';
 
 function EmailQRCodeGenerator() {
   const emailRef = useRef(null);
@@ -10,16 +12,22 @@ function EmailQRCodeGenerator() {
   const logoInputRef = useRef(null);
   const foregroundColorRef = useRef(null);
   const backgroundColorRef = useRef(null);
-  const outputImageRef = useRef(null);
+
+  const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
+  const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
+
 
   const generateEmailQRCode = () => {
     const email = emailRef.current.value;
     const subject = subjectRef.current.value;
     const message = messageRef.current.value;
-    const outputImage = outputImageRef.current;
+
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+
+
+    
 
     if (email) {
       // Construct the email data with subject and message
@@ -80,9 +88,17 @@ function EmailQRCodeGenerator() {
     }
   };
 
+  const toggleFileAccordion = () => {
+    setFileAccordionOpen(!fileAccordionOpen);
+  };
+
+  const toggleColorAccordion = () => {
+    setColorAccordionOpen(!colorAccordionOpen);
+  };
+
   return (
     <div className="container">
-      <h2 className="text-center" style={{marginRight: '20.50rem', marginTop: '0.78rem', fontWeight: '400',}}>Email QR Code </h2>
+      <h2 className="text-center" style={{ marginRight: '20.50rem', marginTop: '0.78rem', fontWeight: '400', }}>Email QR Code </h2>
       <label htmlFor="email">Email Address:</label>
       <input
         type="email"
@@ -106,30 +122,51 @@ function EmailQRCodeGenerator() {
         ref={messageRef}
       />
 
-      <label htmlFor="logoInput">Choose Logo:</label>
-      <input
-        type="file"
-        id="logoInput"
-        ref={logoInputRef}
-      />
+      <div className='test_acc'>
 
-      <label htmlFor="foregroundColor">Foreground Color:</label>
-      <input
-        type="color"
-        id="foregroundColor"
-        defaultValue="#000000"
-        ref={foregroundColorRef}
-      />
 
-      <label htmlFor="backgroundColor">Background Color:</label>
-      <input
-        type="color"
-        id="backgroundColor"
-        defaultValue="#ffffff"
-        ref={backgroundColorRef}
-      />
+        <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleFileAccordion}>
+            <span ><i className={'far fa-image'}></i> Logo</span>
+            <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <span>Or choose here logo</span>
+            <div className='grid-container'>
 
-      <button onClick={generateEmailQRCode}><i className='fa fa-plus' style={{marginRight: '0.78rem',fontWeight:'1000',}}></i>Generate QR Code</button>
+              <div className='box-child'><img src={cancel_image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+
+            </div>
+            <div></div>
+            <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+            <input type="file" id="logoInput" ref={logoInputRef} />
+          </div>
+        </div>
+
+        {/* Accordion for Color Section */}
+        <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleColorAccordion}>
+            <span><i className={'fa fa-cog'}></i>Color</span>
+            <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <label htmlFor="foregroundColor">Foreground Color:</label>
+            <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+
+            <label htmlFor="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+          </div>
+        </div>
+      </div>
+
+      <button onClick={generateEmailQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '1000', }}></i>Generate QR Code</button>
       <div id="outputContainer">
         {/* Display the generated QR code image here */}
         {/* <div id="outputImageContainer">

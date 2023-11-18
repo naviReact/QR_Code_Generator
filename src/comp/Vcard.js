@@ -100,7 +100,7 @@ END:VCARD`;
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{marginRight: '11.50rem', marginTop: '0.78rem',}}>VCard QR Code Generator</h2>
+      <h2 className="text-center" style={{marginRight: '126px', marginTop: '20px',}}>VCard QR Code Generator</h2>
       <label htmlFor="name">First Name:</label>
       <input type="text" id="name" ref={nameRef} placeholder="Name" required/>
 

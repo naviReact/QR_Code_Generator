@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
+import cancel_image from '../User Image/cancel_image.png';
+import image from '../User Image/06-vcard.png';
 
 // Import Font Awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +22,9 @@ function WifiQRCodeGenerator() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
+  const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
   const generateWifiQRCode = () => {
     const ssid = ssidRef.current.value;
@@ -88,6 +93,13 @@ function WifiQRCodeGenerator() {
       SetDownloadImageName("wifi");
     }
   };
+  const toggleFileAccordion = () => {
+    setFileAccordionOpen(!fileAccordionOpen);
+  };
+
+  const toggleColorAccordion = () => {
+    setColorAccordionOpen(!colorAccordionOpen);
+  };
 
   return (
     <div className="container">
@@ -127,28 +139,53 @@ function WifiQRCodeGenerator() {
         <option value="nopass">Open (No Password)</option>
       </select>
 
-      <label htmlFor="logoInput">Choose Logo:</label>
-      <input
-        type="file"
-        id="logoInput"
-        ref={logoInputRef}
-      />
 
-      <label htmlFor="foregroundColor">Foreground Color:</label>
-      <input
-        type="color"
-        id="foregroundColor"
-        defaultValue="#000000"
-        ref={foregroundColorRef}
-      />
 
-      <label htmlFor="backgroundColor">Background Color:</label>
-      <input
-        type="color"
-        id="backgroundColor"
-        defaultValue="#ffffff"
-        ref={backgroundColorRef}
-      />
+      <div className='test_acc'>
+
+    
+      <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleFileAccordion}>
+          <span ><i className={'far fa-image'}></i> Logo</span>
+          <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content">
+          <span>Or choose here logo</span>
+          <div className='grid-container'>
+
+            <div className='box-child'><img src={cancel_image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            <div className='box-child'><img src={image} alt='cancel_image'></img></div>
+            
+          </div>
+          <div></div>
+          <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+          <input type="file" id="logoInput" ref={logoInputRef} />
+        </div>
+      </div>
+
+      {/* Accordion for Color Section */}
+      <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleColorAccordion}>
+          <span><i className={'fa fa-cog'}></i>Color</span>
+          <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content"> 
+          <label htmlFor="foregroundColor">Foreground Color:</label>
+          <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+
+          <label htmlFor="backgroundColor">Background Color:</label>
+          <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+        </div>
+      </div>
+    </div>
+
+      
 
       <button onClick={generateWifiQRCode} className='generate_qr'>Generate QR Code</button>
       

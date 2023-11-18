@@ -260,7 +260,7 @@ function QRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{ marginRight: '11.50rem', marginTop: '0.78rem' }}>
+      <h2 className="text-center" style={{marginRight: '126px', marginTop: '20px',}}>
         URL QR Code Generator
       </h2>
       <label htmlFor="url">Submit URL:</label>
