@@ -34,7 +34,7 @@ function Header() {
 
         <div className="logo">
           <a href="home">
-            <img src={Image} alt="logo" />qrcodSanjue<span style={{color: '#84c45c', fontWeight: '700',}}>Snake</span>
+            <img src={Image} alt="logo" />qrcode<span style={{color: '#84c45c', fontWeight: '700',}}>Snake</span>
           </a>
         </div>
 
