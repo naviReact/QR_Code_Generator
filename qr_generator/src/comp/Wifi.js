@@ -4,9 +4,6 @@ import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
 import image from '../User Image/06-vcard.png';
 
-// Import Font Awesome icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function WifiQRCodeGenerator() {
   const ssidRef = useRef(null);
@@ -128,7 +125,6 @@ function WifiQRCodeGenerator() {
           className="show-hide-button"
           onClick={togglePasswordVisibility}
         >
-          <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
         </button>
       </div>
 
