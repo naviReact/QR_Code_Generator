@@ -255,13 +255,13 @@ header .navbar .links li:hover .js-sub-menu {
   }
 }
 
-/* @media (max-width:800px) {
+@media (max-width:800px) {
   .header-left h2{
     font-size: 130px;
 
   }
   
-} */
+}
 
 
 @media (max-width:800px) {

@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import './App.css';
-import Qr from '../src/modules/Qr.js';
-import Image from '../src/Images/favicon.ico';
-import Footer from './section/Footer.js';
-import Premium from './section/Premium.js';
+import React, { useState } from "react";
+import "./App.css";
+import Qr from "../src/modules/Qr.js";
+import Image from "../src/Images/favicon.ico";
+import Footer from "./section/Footer.js";
+import Premium from "./section/Premium.js";
 
 // import FAQ from '../src/Routing url/FAQ';
-
-
-
-
 
 function Header() {
   const [isNavLinksVisible, setNavLinksVisible] = useState(false);
@@ -20,7 +16,7 @@ function Header() {
   };
 
   const handleMenuCloseClick = () => {
-    setNavLinksVisible(false); 
+    setNavLinksVisible(false);
   };
 
   const handleHtmlCssArrowClick = () => {
@@ -28,13 +24,15 @@ function Header() {
   };
 
   return (
-    <header style={{ backgroundColor: 'white' }}>
+    <header style={{ backgroundColor: "white" }}>
       <div className="navbar">
-        <i className='bx bx-menu' onClick={handleMenuOpenClick}></i>
+        <i className="bx bx-menu" onClick={handleMenuOpenClick}></i>
 
         <div className="logo">
           <a href="home">
-            <img src={Image} alt="logo" />qrcode<span style={{color: '#84c45c', fontWeight: '700',}}>Snake</span>
+            <img src={Image} alt="logo" />
+            qrcode
+            <span style={{ color: "#84c45c", fontWeight: "700" }}>Snake</span>
           </a>
         </div>
 
@@ -44,33 +42,44 @@ function Header() {
               <img src="/qrimg/favicon.ico" alt="logo" />
               QRcode
             </span>
-            <i className='bx bx-x' onClick={handleMenuCloseClick}></i>
+            <i className="bx bx-x" onClick={handleMenuCloseClick}></i>
           </div>
 
           <ul className="links">
-            <li><a href="FAQ">FAQ</a></li>
-            <li><a href="about">Pricing</a></li>
-            
+            <li>
+              <a href="FAQ">FAQ</a>
+            </li>
+            <li>
+              <a href="about">Pricing</a>
+            </li>
+
             {/* Add more list items as needed */}
             <li>
               <a href="##">More</a>
               <i
                 className={`bx bxs-chevron-down htmlcss-arrow arrow ${
-                  isHtmlCssArrowClicked ? 'show1' : ''
+                  isHtmlCssArrowClicked ? "show1" : ""
                 }`}
                 onClick={handleHtmlCssArrowClick}
               ></i>
               <ul
                 className={`htmlCss-sub-menu sub-menu ${
-                  isHtmlCssArrowClicked ? 'show1' : ''
+                  isHtmlCssArrowClicked ? "show1" : ""
                 }`}
               >
-                <li><a href="Terms">Terms</a></li>
-                <li><a href="privacy-policy">privacy</a></li>
-                <li><a href="privacy-policy">Contact</a></li>
-                <li><a href="About">About</a></li>
-                
-                
+                <li>
+                  <a href="Terms">Terms</a>
+                </li>
+                <li>
+                  <a href="privacy-policy">privacy</a>
+                </li>
+                <li>
+                  <a href="privacy-policy">Contact</a>
+                </li>
+                <li>
+                  <a href="About">About</a>
+                </li>
+
                 {/* Add more submenu items as needed */}
               </ul>
             </li>
@@ -92,10 +101,6 @@ function Header() {
       <Qr></Qr>
       <Premium></Premium>
       <Footer></Footer>
-      
-      
-      
-
     </header>
   );
 }
