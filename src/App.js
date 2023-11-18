@@ -20,7 +20,7 @@ function Header() {
   };
 
   const handleMenuCloseClick = () => {
-    setNavLinksVisible(false); 
+    setNavLinksVisible(false);
   };
 
   const handleHtmlCssArrowClick = () => {
@@ -28,75 +28,73 @@ function Header() {
   };
 
   return (
-    <header style={{ backgroundColor: 'white' }}>
-      <div className="navbar">
-        <i className='bx bx-menu' onClick={handleMenuOpenClick}></i>
+    <div className="app_parent">
+      <div className="header-class">
+        <div className="navbar">
+          <i className='bx bx-menu' onClick={handleMenuOpenClick}></i>
 
-        <div className="logo">
-          <a href="home">
-            <img src={Image} alt="logo" />qrcode<span style={{color: '#84c45c', fontWeight: '700',}}>Snake</span>
-          </a>
-        </div>
-
-        <div className="nav-links">
-          <div className="sidebar-logo">
-            <span className="logo-name">
-              <img src="/qrimg/favicon.ico" alt="logo" />
-              QRcode
-            </span>
-            <i className='bx bx-x' onClick={handleMenuCloseClick}></i>
+          <div className="logo">
+            <a href="home">
+              <img src={Image} alt="logo" />qrcode<span style={{ color: '#84c45c', fontWeight: '700', }}>Snake</span>
+            </a>
           </div>
 
-          <ul className="links">
-            <li><a href="FAQ">FAQ</a></li>
-            <li><a href="about">Pricing</a></li>
-            
-            {/* Add more list items as needed */}
-            <li>
-              <a href="##">More</a>
-              <i
-                className={`bx bxs-chevron-down htmlcss-arrow arrow ${
-                  isHtmlCssArrowClicked ? 'show1' : ''
-                }`}
-                onClick={handleHtmlCssArrowClick}
-              ></i>
-              <ul
-                className={`htmlCss-sub-menu sub-menu ${
-                  isHtmlCssArrowClicked ? 'show1' : ''
-                }`}
-              >
-                <li><a href="Terms">Terms</a></li>
-                <li><a href="privacy-policy">privacy</a></li>
-                <li><a href="privacy-policy">Contact</a></li>
-                <li><a href="About">About</a></li>
-                
-                
-                {/* Add more submenu items as needed */}
-              </ul>
-            </li>
+          <div className="nav-links">
+            <div className="sidebar-logo">
+              <span className="logo-name">
+                <img src="/qrimg/favicon.ico" alt="logo" />
+                QRcode
+              </span>
+              <i className='bx bx-x' onClick={handleMenuCloseClick}></i>
+            </div>
 
-            <div className="nav-btn-login">
-              <a href="Login" className="btn-1">
-                Login
-              </a>
-            </div>
-            <div className="nav-btn-sign">
-              <a href="Sign-Up" className="btn-2">
-                Sign Up
-              </a>
-            </div>
-          </ul>
+            <ul className="links">
+              <li><a href="FAQ">FAQ</a></li>
+              <li><a href="about">Pricing</a></li>
+
+              {/* Add more list items as needed */}
+              <li>
+                <a href="##">More</a>
+                <i
+                  className={`bx bxs-chevron-down htmlcss-arrow arrow ${isHtmlCssArrowClicked ? 'show1' : ''
+                    }`}
+                  onClick={handleHtmlCssArrowClick}
+                ></i>
+                <ul
+                  className={`htmlCss-sub-menu sub-menu ${isHtmlCssArrowClicked ? 'show1' : ''
+                    }`}
+                >
+                  <li><a href="Terms">Terms</a></li>
+                  <li><a href="privacy-policy">privacy</a></li>
+                  <li><a href="privacy-policy">Contact</a></li>
+                  <li><a href="About">About</a></li>
+
+
+                  {/* Add more submenu items as needed */}
+                </ul>
+              </li>
+
+              <div className="nav-btn-login">
+                <a href="Login" className="btn-1">
+                  Login
+                </a>
+              </div>
+              <div className="nav-btn-sign">
+                <a href="Sign-Up" className="btn-2">
+                  Sign Up
+                </a>
+              </div>
+            </ul>
+          </div>
         </div>
+
       </div>
 
       <Qr></Qr>
       <Premium></Premium>
       <Footer></Footer>
-      
-      
-      
 
-    </header>
+    </div>
   );
 }
 

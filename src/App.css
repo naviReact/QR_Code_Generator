@@ -8,18 +8,34 @@
 }
 
 body {
-  width: 100%;
-  max-height: 100vh;
+  /* width: 100%; */
+  /* max-height: 100vh; */
+}
+
+.-class {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_parent {
+  /* background-color: black; */
+  /* width: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
 
-  position: sticky;
+  /* position: sticky; */
   padding: 7rem 0;
 }
 
 p {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   font-family: Graphik, "Open Sans", Arial, sans-serif;
   /* font-family: 'Nanito',Arial, Helvetica, sans-serif; */
   line-height: 1.8rem;
@@ -32,31 +48,16 @@ p {
 
 
 
-
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  height: 70px;
-  /* background: ; */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  
-  z-index: 1;
-}
-
-header .navbar {
+.navbar {
   height: 100%;
   max-width: 1250px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
+  /* margin: auto; */
   /* background: red; */
-  padding: 0 50px;
+  /* padding: 0 50px; */
 }
 
 .navbar .logo a {
@@ -65,21 +66,22 @@ header .navbar {
   text-decoration: none;
   font-weight: 400;
 }
-.navbar .logo span{
+
+.navbar .logo span {
   color: yellowgreen;
 
 }
 
-header .navbar .nav-links {
+.navbar .nav-links {
   line-height: 70px;
   height: 100%;
 }
 
-header .navbar .links {
+.navbar .links {
   display: flex;
 }
 
-header .navbar .links li {
+.navbar .links li {
   position: relative;
   display: flex;
   align-items: center;
@@ -88,7 +90,7 @@ header .navbar .links li {
   padding: 0 14px;
 }
 
-header .navbar .links li a {
+.navbar .links li a {
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
@@ -97,10 +99,10 @@ header .navbar .links li a {
   font-weight: 400;
 }
 
-header .navbar .links li a:hover {
+.navbar .links li a:hover {
   color: rgb(79, 70, 229);
   transition: 0.5s ease;
-  
+
 }
 
 .links li:hover .htmlcss-arrow,
@@ -109,10 +111,10 @@ header .navbar .links li a:hover {
 }
 
 
-header .navbar .links li .arrow {
+.navbar .links li .arrow {
 
   height: 100%;
-  width: 22px;
+  /* width: 22px; */
   line-height: 70px;
   text-align: center;
   display: inline-block;
@@ -120,7 +122,7 @@ header .navbar .links li .arrow {
   transition: all 0.3s ease;
 }
 
-header .navbar .links li .sub-menu {
+.navbar .links li .sub-menu {
   position: absolute;
   top: 70px;
   left: 0;
@@ -133,22 +135,22 @@ header .navbar .links li .sub-menu {
   /* background-color: aqua; */
 }
 
-header .navbar .links li:hover .htmlCss-sub-menu,
-header .navbar .links li:hover .js-sub-menu {
+.navbar .links li:hover .htmlCss-sub-menu,
+.navbar .links li:hover .js-sub-menu {
   display: block;
 }
 
 .navbar .links li .sub-menu li {
   padding: 0 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  
+
 }
 
 .navbar .links li .sub-menu a {
   color: #4a4a4a;
   font-size: 15px;
   font-weight: 400;
-  
+
 }
 
 /* 
@@ -196,7 +198,7 @@ header .navbar .links li:hover .js-sub-menu {
 }
 
 
-      /* login section btn */
+/* login section btn */
 
 
 .nav-btn-sign a {
@@ -220,43 +222,43 @@ header .navbar .links li:hover .js-sub-menu {
 
 
 
-.nav-btn-sign a:hover{
+.nav-btn-sign a:hover {
   background-color: rgb(67 56 202);
   /* transition: all 0.4s linear; */
 }
 
-.nav-btn-login a:hover{
+.nav-btn-login a:hover {
   color: rgb(77 56 202);
-  
+
 }
 
 
 @media (max-width:920px) {
-  header .navbar {
-    max-width: 100%;
+  .navbar {
+    /* max-width: 100%; */
     padding: 0 25px;
     /* align-items: center; */
   }
 
-  header .navbar .logo a {
+  .navbar .logo a {
     /* margin-right: 10rem; */
     /* margin-left: 120px; */
     font-size: 27px;
     align-items: center;
   }
 
-  header .navbar .links li {
+  .navbar .links li {
     padding: 0 10px;
     white-space: nowrap;
   }
 
-  header .navbar .links li a {
+  .navbar .links li a {
     font-size: 15px;
   }
 }
 
 /* @media (max-width:800px) {
-  .header-left h2{
+  .-left h2{
     font-size: 130px;
 
   }
@@ -269,23 +271,23 @@ header .navbar .links li:hover .js-sub-menu {
     display: block;
   }
 
-  /* .header-right img{
+  /* .-right img{
     float: left;
   } */
-  header .navbar .nav-links {
+  .navbar .nav-links {
     position: fixed;
     top: 0;
     left: -100%;
     display: block;
-    max-width: 270px;
-    width: 100%;
+    /* max-width: 270px; */
+    /* width: 100%; */
     background: white;
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
     z-index: 1000;
-    
+
   }
 
   .navbar .nav-links .sidebar-logo {
@@ -305,27 +307,27 @@ header .navbar .links li:hover .js-sub-menu {
     color: black;
   }
 
-  header .navbar .links {
+  .navbar .links {
     display: block;
     margin-top: 20px;
   }
 
-  header .navbar .links li .arrow {
+  .navbar .links li .arrow {
     line-height: 40px;
   }
 
-  header .navbar .links li {
+  .navbar .links li {
     display: block;
   }
 
-  header .navbar .links li .sub-menu {
+  .navbar .links li .sub-menu {
     position: relative;
     top: 0;
     box-shadow: none;
     display: none;
   }
 
-  header .navbar .links li .sub-menu li {
+  .navbar .links li .sub-menu li {
     border-bottom: none;
 
   }
@@ -362,8 +364,8 @@ header .navbar .links li:hover .js-sub-menu {
     display: none;
   }
 
-  header .navbar .links li:hover .htmlCss-sub-menu,
-  header .navbar .links li:hover .js-sub-menu {
+  .navbar .links li:hover .htmlCss-sub-menu,
+  .navbar .links li:hover .js-sub-menu {
     display: none;
   }
 
@@ -387,11 +389,11 @@ header .navbar .links li:hover .js-sub-menu {
     margin-top: 6rem;
   }
 
-  .header-left h2 {
+  .-left h2 {
     font-size: 5.2rem;
   }
 
-  section .header-right img {
+  section .-right img {
     align-items: center;
   }
 
@@ -402,8 +404,8 @@ header .navbar .links li:hover .js-sub-menu {
 
 
 @media (max-width:370px) {
-  header .navbar .nav-links {
-    max-width: 100%;
+  .navbar .nav-links {
+    /* max-width: 100%; */
     max-height: 100vh;
   }
 
@@ -411,5 +413,3 @@ header .navbar .links li:hover .js-sub-menu {
     margin-top: 6rem;
   }
 }
-
-

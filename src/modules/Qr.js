@@ -47,10 +47,10 @@ const Qr = () => {
     console.log("currentComponentIndex : ", currentComponentIndex);
   }, [currentComponentIndex]);
 
-
+// return<div>test code of sanjufasdklfjhaksdjhf kajsd<p/>hf kjahsdjkf hasdkjfh kasjdhf kajsdhfk jhfsad<p></p>/fj haksjdhf kajsd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kefhk</div>
 
   return (
-    <section>
+    <div className='qr_parent'>
       <div className='container-qr'>
         <div className='container-wrapper'>
           <div className='qr-links'>
@@ -75,12 +75,12 @@ const Qr = () => {
 
           <img className="qu_div_image_generated" src={Image} alt="qr_code" />
           <div className='test_qr_download'>
-            <button onClick={TEst_qu_Function} style={{ display: 'inline-flex', backgroundColor: 'rgb(79, 70, 229)', borderRadius: '7px', border: 'none', outline: 'none', textDecoration: 'none', padding: '16px 20px', textAlign: 'center', color: 'white', marginTop: '3rem', marginLeft: '1.9rem', cursor: 'pointer', fontSize: '15px', }}>Download QR Code</button>
+            <div onClick={TEst_qu_Function} >Download QR Code</div>
           </div>
         </div>
       </div>
 
-    </section>
+    </div>
 
     // background-color: rgb(79, 70, 229);
     // background-color: rgb(67 56 202);
