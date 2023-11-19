@@ -1,0 +1,69 @@
+.Whats {
+    
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width: 100vw;
+    padding: 70px 0;
+
+
+    
+}
+
+.Whats .container{
+  display: flex;
+  flex-direction: column;
+}
+
+.Whats h2{
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+
+.Whats p{
+    font-size: 1.2em;
+  text-align: left;
+  
+  font-weight: 400;
+  color: black;
+}
+
+.Whats .container{
+    background-color: #fbfbff;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.image {
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width based on your design */
+    margin-top: 20px; /* Adjust spacing between content and image */
+  }
+
+
+
+
+  @media (min-width: 768px) {
+    /* Add additional styling for larger screens if needed */
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .content {
+      width: 45%; /* Adjust the width based on your design */
+      margin-right: 10px; /* Adjust spacing between content and image */
+    }
+  
+    .image {
+      width: 45%; /* Adjust the width based on your design */
+    }
+  }

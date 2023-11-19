@@ -23,14 +23,19 @@
     background-color: #ffffff;
     border: 1px solid;
     border-color: #e9ecef;
-    height: 167px;
-    flex-direction: row;
+    width: 581px;
+/* height: 167px; */
+/* flex-shrink: 0; */
+    height: 175px;
+    flex-direction: column;
+    
 }
 
 .qr-links {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    /* background-color: #11ab7c; */
 }
 
 .output-div {
@@ -44,7 +49,8 @@
     justify-content: space-between;
     /* flex-direction: row; */
     flex-wrap: wrap;
-    padding-top: 1.6rem;
+    
+    /* padding-top: 1.6rem; */
 }
 
 
@@ -56,10 +62,19 @@
 
 
 .container-wrapper .alag {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
+    border: 1px solid #ddd;
+    padding: 13px 28px;
+
+    /* background: #2196F3; */
     /* margin-top: 43px; */
-    margin-right: 0.68rem;
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    flex-direction: row;
+    /* margin-right: 0.68rem; */
+    /* background-color: #11ab7c; */
 
 }
 
@@ -81,6 +96,7 @@
     text-decoration: none;
     color: black;
     font-weight: 500;
+    /* background-color: #11ab7c; */
     /* border-bottom: 1px solid rgb(0, 0, 0,0.15); */
     /* padding: 12px; */
 
@@ -104,6 +120,8 @@
     justify-content: start;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 2rem;
+    margin-left: 12px;
+     /* background-color: #11ab7c; */
 }
 
 
@@ -138,12 +156,13 @@
 
 .test_qr_download {
     display: inline-flex;
-    background-color: rgb(79, 70, 229);
-    border-radius: 7px;
+    background-color: #42A5F5;
+    /* background-color: rgb(79, 70, 229); */
+    border-radius: 8px;
     border: none;
     outline: none;
     text-decoration: none;
-    padding: 16px 20px;
+    padding: 16px 32px;
     text-align: center;
     color: white;
     margin-top: 3rem;
@@ -153,9 +172,16 @@
 
 }
 
+.test_qr_download i{
+    margin-right: .78rem;
+    font-weight: 900;
+}
+
 .preview-continer .test_qr_download:hover {
     /* background-color: #e9ecef; */
-    background-color:rgb(69,56,202);    
+    background-color: #2196F3;
+    /* background-color:rgb(69,56,202);   */
+     
     /* color: white; */
 
 }
@@ -215,16 +241,29 @@
     }
 }
 
-@media (max-width: 574px) {
-    .container-wrapper{
-        /* display: flex;
-        justify-content: center;
-        place-items: center; */
-        /* display: flex; */
-        /* justify-content: flex-start; */
-        
-        grid-template-columns: 1fr;
+ @media (max-width: 774px) {
+    /* text URL  */
+    .text-center{
         /* background-color: #11ab7c; */
+        display: inline;
+        font-size: 1.8rem;
     }
+
+
+    .test_qr_download{
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 34px;
+        /* background-color: #11ab7c; */
+        /* display: inline;
+        font-size: 1.8rem; */
+    }
+
+    
     
 }
+
+
+
+

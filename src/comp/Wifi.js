@@ -1,8 +1,15 @@
 import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
+import cancel_image from '../User Image/cancel_image.png';
+import image from '../User Image/links image.png';
+import Youtube_Image from '../User Image/youtube.png';
+import Insta_Image from '../User Image/instagram (1).png';
+import Email_Image from '../User Image/email logo.png';
+import location_Image from '../User Image/location logo.png';
+import whatsapp_Image from '../User Image/whatsapp logo.png';
+import wifi_Image from '../User Image/wifi logo.png';
 
-// Import Font Awesome icons
 
 function WifiQRCodeGenerator() {
   const ssidRef = useRef(null);
@@ -18,6 +25,9 @@ function WifiQRCodeGenerator() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
+  const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
   const generateWifiQRCode = () => {
     const ssid = ssidRef.current.value;
@@ -87,6 +97,14 @@ function WifiQRCodeGenerator() {
     }
   };
 
+  const toggleFileAccordion = () => {
+    setFileAccordionOpen(!fileAccordionOpen);
+  };
+
+  const toggleColorAccordion = () => {
+    setColorAccordionOpen(!colorAccordionOpen);
+  };
+
   return (
     <div className="container">
       <h2 className="text-center" style={{marginRight: '16.50rem', marginTop: '0.78rem',}}>WiFi QR Code Generator</h2>
@@ -109,11 +127,12 @@ function WifiQRCodeGenerator() {
           required
           style={{width: '537px', height: '50px',borderRadius: '8px', padding: '13.106px 12.006px 13.096px 11.996px', border: '1px solid #ccc',}}
         />
-        <button
+        <button 
         style={{padding: '12px 25px', marginLeft : '1rem',}}
           className="show-hide-button"
           onClick={togglePasswordVisibility}
         >
+        <i className='fa fa-eye-slash'></i>
         </button>
       </div>
 
@@ -124,30 +143,55 @@ function WifiQRCodeGenerator() {
         <option value="nopass">Open (No Password)</option>
       </select>
 
-      <label htmlFor="logoInput">Choose Logo:</label>
-      <input
-        type="file"
-        id="logoInput"
-        ref={logoInputRef}
-      />
 
-      <label htmlFor="foregroundColor">Foreground Color:</label>
-      <input
-        type="color"
-        id="foregroundColor"
-        defaultValue="#000000"
-        ref={foregroundColorRef}
-      />
 
-      <label htmlFor="backgroundColor">Background Color:</label>
-      <input
-        type="color"
-        id="backgroundColor"
-        defaultValue="#ffffff"
-        ref={backgroundColorRef}
-      />
+      <div className='test_acc'>
 
-      <button onClick={generateWifiQRCode} className='generate_qr'>Generate QR Code</button>
+    
+      <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleFileAccordion}>
+          <span ><i className={'far fa-image'}></i> Logo</span>
+          <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content">
+          <span>Or choose here logo</span>
+          <div className='grid-container'>
+
+            <div className='box-child'><img src={cancel_image}></img></div>
+            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={Youtube_Image}></img></div>
+            <div className='box-child'><img src={Email_Image}></img></div>
+            <div className='box-child'><img src={location_Image}></img></div>
+            <div className='box-child'><img src={whatsapp_Image}></img></div>
+            <div className='box-child'><img src={wifi_Image}></img></div>
+            <div className='box-child'><img src={Insta_Image}></img></div>
+            
+          </div>
+          <div></div>
+          <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+          <input type="file" id="logoInput" ref={logoInputRef} />
+        </div>
+      </div>
+
+      {/* Accordion for Color Section */}
+      <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+        <div className="accordion-header" onClick={toggleColorAccordion}>
+          <span><i className={'fa fa-cog'}></i>Color</span>
+          <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+        </div>
+        <div className="accordion-content"> 
+          <label htmlFor="foregroundColor">Foreground Color:</label>
+          <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+
+          <label htmlFor="backgroundColor">Background Color:</label>
+          <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+        </div>
+      </div>
+    </div>
+
+      
+
+      <button onClick={generateWifiQRCode} className='generate_qr'><i className='fa fa-plus' style={{marginRight: '0.78rem', fontWeight: '900',}}></i> Generate QR Code</button>
       
     </div>
   );

@@ -1,6 +1,6 @@
 
   
-  h2 {
+  .text-center {
     margin-bottom: 20px;
   }
   
@@ -21,6 +21,8 @@
     margin: 5px 0;
     border-radius: 8px;
     color: #2A354F;
+    /* display: flex; */
+    flex-direction: column;
     
   }
   input[type = "text"],[type = "file"]:focus{
@@ -162,6 +164,19 @@ line-height: 22.4px; /* 140% */
 .accordion-content .grid-container .box-child:hover{
   border: 1px solid #84c45c;
   /* transition: all 0.5s ease; */
+}
+
+
+
+
+@media (max-width: 774px) {
+
+  .container .generate_qr{
+    width: 100%;
+    /* border: none; */
+    /* background-color: #2A354F; */
+  }
+  
 }
 
 

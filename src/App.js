@@ -4,6 +4,8 @@ import Qr from '../src/modules/Qr.js';
 import Image from '../src/Images/favicon.ico';
 import Footer from './section/Footer.js';
 import Premium from './section/Premium.js';
+import HowToSection from './section/HowQR.js';
+import QRwhat from './section/QRwhat.js';
 
 // import FAQ from '../src/Routing url/FAQ';
 
@@ -91,6 +93,8 @@ function Header() {
       </div>
 
       <Qr></Qr>
+      <HowToSection></HowToSection>
+      <QRwhat></QRwhat>
       <Premium></Premium>
       <Footer></Footer>
 

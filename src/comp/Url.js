@@ -153,7 +153,13 @@ import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import '../comp/Url.css'; // Make sure to provide the correct path
 import cancel_image from '../User Image/cancel_image.png';
-import image from '../User Image/06-vcard.png';
+import image from '../User Image/links image.png';
+import Youtube_Image from '../User Image/youtube.png';
+import Insta_Image from '../User Image/instagram (1).png';
+import Email_Image from '../User Image/email logo.png';
+import location_Image from '../User Image/location logo.png';
+import whatsapp_Image from '../User Image/whatsapp logo.png';
+import wifi_Image from '../User Image/wifi logo.png';
 
 function QRCodeGenerator() {
   const urlRef = useRef(null);
@@ -284,12 +290,12 @@ function QRCodeGenerator() {
 
             <div className='box-child'><img src={cancel_image}></img></div>
             <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
-            <div className='box-child'><img src={image}></img></div>
+            <div className='box-child'><img src={Youtube_Image}></img></div>
+            <div className='box-child'><img src={Email_Image}></img></div>
+            <div className='box-child'><img src={location_Image}></img></div>
+            <div className='box-child'><img src={whatsapp_Image}></img></div>
+            <div className='box-child'><img src={wifi_Image}></img></div>
+            <div className='box-child'><img src={Insta_Image}></img></div>
             
           </div>
           <div></div>

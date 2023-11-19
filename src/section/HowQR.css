@@ -1,0 +1,46 @@
+.How-to {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+.How-to .grid-template-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 5px;
+    width: 1000px;
+    outline: 1.1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 40px;
+    padding: 6%;
+  }
+  
+.How-to .container {
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+.How-to .container img {
+    width: 12%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 17px;
+  }
+  
+.How-to.container div {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+.How-to .sub {
+    text-align: center;
+    color: #555;
+  }
+  
+.How-to .counting {
+    display: block;
+    margin: 0 auto;
+    padding-top: 1.8rem;
+  }
+  

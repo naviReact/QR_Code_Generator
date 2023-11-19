@@ -54,6 +54,7 @@ const Qr = () => {
       <div className='container-qr'>
         <div className='container-wrapper'>
           <div className='qr-links'>
+          {/* <i className='fa fa-link'></i> */}
             {menuItems.map((val, i, self) => {
               const OnClick = () => {
                 setCurrentComponentIndex(i);
@@ -75,7 +76,7 @@ const Qr = () => {
 
           <img className="qu_div_image_generated" src={Image} alt="qr_code" />
           <div className='test_qr_download'>
-            <div onClick={TEst_qu_Function} >Download QR Code</div>
+            <div onClick={TEst_qu_Function} ><i className='fa fa-download'></i> Download QR code</div>
           </div>
         </div>
       </div>
