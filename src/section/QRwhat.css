@@ -1,19 +1,20 @@
 .Whats {
     
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    width: 100vw;
-    padding: 70px 0;
+    background-color: #fbfbff;
+    width: 1600px;
+    margin: 0 auto;
+    overflow: hidden
 
 
     
 }
 
-.Whats .container{
-  display: flex;
+.Whats .col-md-6{
+    display: flex;
   flex-direction: column;
 }
+
+
 
 .Whats h2{
   font-size: 42px;
@@ -33,20 +34,30 @@
 }
 
 .Whats .container{
-    background-color: #fbfbff;
-    width: 100%;
+    /* background-color: #fbfbff; */
+    /* width: 100%;
     max-width: 600px;
     text-align: center;
-    padding: 20px;
+    padding: 20px; */
+
+
+    float: left;
+    width: 100%;
+    padding: 20px
 }
 
 
 
-.image {
+
+
+
+.row img{
+    margin-left: 18rem;
     width: 100%;
     max-width: 600px; /* Adjust the max-width based on your design */
-    margin-top: 20px; /* Adjust spacing between content and image */
-  }
+    margin-top: 10px; /* Adjust spacing between content and image */
+    /* background-color: blue; */
+}
 
 
 

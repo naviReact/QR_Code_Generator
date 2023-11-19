@@ -42,5 +42,12 @@
     display: block;
     margin: 0 auto;
     padding-top: 1.8rem;
-  }
+}
+
+@media (max-width:  1000px){
+    .How-to .container{
+        /* background-color: #555; */
+        flex-direction: column;
+    }
+}
   

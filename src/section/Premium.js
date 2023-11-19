@@ -16,7 +16,7 @@ function Premium() {
             <div>
               <h2>Get more with Premium</h2>
               <p>
-                Complete projects faster with batch file processing. Convert
+                Complete QR faster with batch file processing. Convert
                 scanned documents with OCR. E-sign your business agreements.
               </p>
             </div>
