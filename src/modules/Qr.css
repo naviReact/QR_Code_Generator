@@ -341,4 +341,13 @@
     }
 }
 
+@media (max-width: 520px){
+    .container-wrapper{
+        /* display: grid; */
+        grid-template-columns: repeat(10, 1fr);
+        /* flex-wrap: nowrap; */
+        /* background-color: aqua; */
+    }
+}
+
 
