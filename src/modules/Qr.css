@@ -16,6 +16,7 @@
     padding: 50px;
     border-radius: 4px;
     margin-top: 2rem;
+    max-width: 100%;
     
 }
 
@@ -119,8 +120,9 @@
     align-items: center;
     justify-content: start;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 2rem;
-    margin-left: 12px;
+    /* margin-top: 2rem; */
+    max-width: 800px;
+    margin-left: 10px;
      /* background-color: #11ab7c; */
 }
 
@@ -228,6 +230,7 @@
 
     .preview-continer {
         width: 100%;
+        /* max-width: 1000px; */
         /* width: inherit; */
         flex-direction: column;
         align-items: center;
@@ -239,7 +242,13 @@
         width: 100%;
 
     }
+
+    .preview img{
+        display: block;
+        margin: auto;
+    }
 }
+
 
  @media (max-width: 774px) {
     /* text URL  */
@@ -260,10 +269,84 @@
         font-size: 1.8rem; */
     }
 
+    .preview img{
+        display: block;
+        margin: auto;
+    }
+
     
     
 }
 
+@media  (max-width: 678px){
+    .container-qr{
+        max-width: 1700px;
+        margin: auto;
+        width: 100%;
+        /* flex-direction: column; */
+        /* background-color: aqua; */
+    }
+    .container-wrapper{
+        max-width: 1000px;
+        flex-direction: row;
+        margin: 0 auto;
+        display: grid;
+        margin-left: 3rem;
+
+        
+    }
+
+
+    .preview img{
+        display: block;
+        margin: auto;
+    }
+
+
+    
+}
+
+@media (max-width: 438px){
+    .preview img{
+        display: block;
+        margin: auto;
+        /* background-color: #11ab7c; */
+    }
+
+    .preview-continer .test_qr_download{
+        margin-left: 5rem;
+        /* background-color: #11ab7c; */
+    }
+}
+
+
+@media (max-width: 360px){
+    .preview img{
+        display: block;
+        margin: auto;
+        flex-direction: column;
+        /* background-color: #11ab7c; */
+    }
+
+    .preview-continer .test_qr_download{
+        margin-left: 7rem;
+        /* background-color: #11ab7c; */
+    }
+}
+
+
+@media (max-width: 538px){
+    .container-wrapper{
+        /* max-width: 1000px;
+        flex-direction: row;
+        margin: 0 auto;
+        display: grid; */
+        margin-left: 8rem;
+        /* background-color: #11ab7c; */
+
+        
+    }
+}
 
 
 

@@ -90,6 +90,8 @@
 
 @media (max-width: 480px){
   .premium-section{
+    
+    max-width: 1500px;
     padding: 12px 12px;
   }
 }
