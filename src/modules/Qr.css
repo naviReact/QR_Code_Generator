@@ -3,29 +3,20 @@
     justify-content: center;
     align-items: start;
     flex-direction: row;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
     /* background: linear-gradient(to bottom, #175d69 23%, #330c43 95%); */
 
 }
 
 .container-qr {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     background: rgb(243, 247, 250);
-    padding: 50px;
     border-radius: 4px;
-    margin-top: 2rem;
-    max-width: 100%;
-    
-}
+    align-items: center;
+    justify-content: center;
 
-
-.qr-links {
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    /* background-color: #11ab7c; */
 }
 
 .output-div {
@@ -39,26 +30,38 @@
 
 /* Main Links are style */
 
-.container-wrapper{
+.container-wrapper {
     width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .qr-links-parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px; /* Adjust the gap as needed */
-    /* background-color: #2196F3; */
+    grid-gap: 10px;
     margin-bottom: 12px;
     flex-direction: row;
     cursor: pointer;
-  }
-  
-  .sub_menu_items {
+}
+
+.sub_menu_items {
     /* Add any styling you want for each grid item */
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-  }
+    border-radius: 3px;
+    transition: .3s;
+
+}
+
+.sub_menu_items:hover {
+    transition: .3s;
+    border: 1px solid #3d3d3d;
+}
+
 
 
 
@@ -80,21 +83,11 @@
     margin-top: 2rem;
     max-width: 800px;
     margin-left: 10px;
-     /* background-color: #11ab7c; */
+
 }
 
 
-/* .preview-continer{
-    background-color: white;
-    padding: 50px;
-    min-width: 320px;
-    min-height: 60vh;
-    margin-top: 2rem;
-    border-radius: 4px;
-    outline: 1.45px solid rgb(0,0,0,0.35);
 
-    
-} */
 
 .preview-continer img {
     display: flex;
@@ -116,7 +109,6 @@
 .test_qr_download {
     display: inline-flex;
     background-color: #42A5F5;
-    /* background-color: rgb(79, 70, 229); */
     border-radius: 8px;
     border: none;
     outline: none;
@@ -131,56 +123,19 @@
 
 }
 
-.test_qr_download i{
-    margin-right: .78rem;
+.test_qr_download i {
     font-weight: 900;
 }
 
 .preview-continer .test_qr_download:hover {
-    /* background-color: #e9ecef; */
     background-color: #2196F3;
-    /* background-color:rgb(69,56,202);   */
-     
-    /* color: white; */
-
 }
 
-/* .test_qr_download :hover {
-    transition: 0.3s;
-    /* background-color: black; */
-    /* cursor: pointer; */
-/* } */
 
-/* preview media quries  */
-
-
-
-/* @media (max-width: 1300px) {
-     {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .container-qr {
-        margin-top: 2rem; 
-    }
-
-    .preview {
-        margin-top: 2rem; 
-    }
-
-    .preview-continer {
-        flex-grow: 1;
-        background-color: #f4f4f4; 
-    }
-}
-*/
 
 @media (max-width: 1000px) {
     .qr_parent {
         flex-direction: column;
-        /* margin-right: 0; */
-        /* margin-top: 2rem;  */
         align-items: center;
         justify-content: center;
     }
@@ -197,161 +152,27 @@
     .preview {
         /* background-color: black; */
         width: 100%;
-
     }
 
-    .preview img{
-        display: block;
+    .preview img {
         margin: auto;
     }
 }
 
 
- @media (max-width: 774px) {
-    /* text URL  */
-    .text-center{
-        /* background-color: #11ab7c; */
-        display: inline;
-        font-size: 1.8rem;
-    }
-
-
-    .test_qr_download{
-        width: 70%;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 34px;
-        /* background-color: #11ab7c; */
-        /* display: inline;
-        font-size: 1.8rem; */
-    }
-
-    .preview img{
-        display: block;
-        margin: auto;
-    }
-
-    
-    
-}
-
-@media  (max-width: 678px){
-    .container-qr{
-        max-width: 1700px;
-        margin: auto;
-        width: 100%;
-        /* flex-direction: column; */
-        /* background-color: aqua; */
-    }
-    .container-wrapper{
-        max-width: 1000px;
-        flex-direction: row;
-        margin: 0 auto;
-        display: grid;
-        margin-left: 3rem;
-
-        
-    }
-
-
-    .preview img{
-        display: block;
-        margin: auto;
-    }
-
-
-    
-}
-
-@media (max-width: 438px){
-    .preview img{
+@media (max-width: 600px) {
+    .preview img {
         display: block;
         margin: auto;
         /* background-color: #11ab7c; */
     }
 
-    .preview-continer .test_qr_download{
+    .preview-continer .test_qr_download {
         margin-left: 5rem;
         /* background-color: #11ab7c; */
     }
-}
 
-
-@media (max-width: 360px){
-    .preview img{
-        display: block;
-        margin: auto;
-        flex-direction: column;
-        /* background-color: #11ab7c; */
-    }
-
-    .preview-continer .test_qr_download{
-        margin-left: 7rem;
-        /* background-color: #11ab7c; */
+    .qr-links-parent {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-@media (max-width: 538px){
-    .container-wrapper{
-        /* max-width: 1000px;
-        flex-direction: row;
-        margin: 0 auto;
-        display: grid; */
-        margin-left: 8rem;
-        /* background-color: #11ab7c; */
-
-        
-    }
-}
-
-
-@media (max-width: 452px){
-    .container-wrapper{
-        /* max-width: 1000px;
-        flex-direction: row;
-        margin: 0 auto;
-        display: grid; */
-        margin-left: 10rem;
-        /* background-color: #11ab7c; */
-
-        
-    }
-}
-
-@media (max-width: 420px){
-    .container-wrapper{
-        /* max-width: 1000px;
-        flex-direction: row;
-        margin: 0 auto;
-        display: grid; */
-        margin-left: 13rem;
-        /* background-color: #11ab7c; */
-
-        
-    }
-}
-
-@media (max-width: 376px){
-    .container-wrapper{
-        /* max-width: 1000px;
-        flex-direction: row;
-        margin: 0 auto;
-        display: grid; */
-        margin-left: 16rem;
-        /* background-color: #11ab7c; */
-
-        
-    }
-}
-
-@media (max-width: 540px){
-    .container-wrapper{
-        /* display: grid; */
-        grid-template-columns: repeat(10, 1fr);
-        /* flex-wrap: nowrap; */
-        /* background-color: aqua; */
-    }
-}
-
-
