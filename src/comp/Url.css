@@ -206,6 +206,39 @@ line-height: 22.4px; /* 140% */
 
 }
 
+@media  (max-width: 450px){
+  .container {
+    margin-left: 9.20rem;
+    /* background-color: #84c45c; */
+  }
+
+  
+
+}
+
+@media  (max-width: 420px){
+  .container {
+    margin-left: 12rem;
+    
+  }
+
+  
+
+}
+
+@media  (max-width: 376px){
+  .container {
+    margin-left: 15rem;
+    
+  }
+
+  
+
+}
+
+
+
+
 
 
  
