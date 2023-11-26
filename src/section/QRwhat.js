@@ -27,7 +27,7 @@ const QRwhat = () => {
                         <img
                             src={group}
                             alt="Get more with Premium"
-                            className="premium-image"
+                            className="whatsQR"
                         />
                     </div>
                 </div>
