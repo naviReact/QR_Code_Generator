@@ -20,17 +20,6 @@
     
 }
 
-.container-wrapper {
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #e9ecef;
-    width: 581px;
-/* height: 167px; */
-/* flex-shrink: 0; */
-    height: 175px;
-    flex-direction: column;
-    
-}
 
 .qr-links {
     display: flex;
@@ -45,65 +34,29 @@
     justify-content: center;
 }
 
-.container-wrapper .qr-links {
-    display: flex;
-    justify-content: space-between;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    
-    /* padding-top: 1.6rem; */
-}
-
-
 
 
 
 /* Main Links are style */
 
-
-
-.container-wrapper .alag {
-    flex-direction: row;
-    justify-content: flex-start;
-    border: 1px solid #ddd;
-    padding: 13px 28px;
-
-    /* background: #2196F3; */
-    /* margin-top: 43px; */
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
-    /* grid-template-columns: repeat(4, 1fr); */
-    flex-direction: row;
-    /* margin-right: 0.68rem; */
-    /* background-color: #11ab7c; */
-
+.container-wrapper{
+    width: 100%;
 }
 
-
-.container-wrapper .alag:hover {
-
-    color: #11ab7c;
-    transition: 0.5s linear;
-}
-
-
-.qr-links a {
-
-    cursor: pointer;
-    align-items: stretch;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 2px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    /* background-color: #11ab7c; */
-    /* border-bottom: 1px solid rgb(0, 0, 0,0.15); */
-    /* padding: 12px; */
+.qr-links-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .sub_menu_items {
+    /* Add any styling you want for each grid item */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
 
 
-    border-radius: 2px;
-}
 
 
 

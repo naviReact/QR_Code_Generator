@@ -53,15 +53,14 @@ const Qr = () => {
     <div className='qr_parent'>
       <div className='container-qr'>
         <div className='container-wrapper'>
-          <div className='qr-links'>
+          <div className='qr-links-parent'>
           {/* <i className='fa fa-link'></i> */}
             {menuItems.map((val, i, self) => {
               const OnClick = () => {
                 setCurrentComponentIndex(i);
-                console.log("Click call", i);
               };
               return (
-                <div className="alag" key={i} onClick={OnClick}>
+                <div className="sub_menu_items" key={i} onClick={OnClick}>
                   {val.name}
                 </div>
               );
