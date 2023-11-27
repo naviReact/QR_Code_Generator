@@ -135,16 +135,23 @@
 
 
 import '../comp/Sms.css';
-import React, { useRef , useState} from 'react';
+import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
-import image from '../User Image/06-vcard.png';
+import image from '../User Image/links image.png';
+import Youtube_Image from '../User Image/youtube.png';
+import Insta_Image from '../User Image/instagram (1).png';
+import Email_Image from '../User Image/email logo.png';
+import location_Image from '../User Image/location logo.png';
+import whatsapp_Image from '../User Image/whatsapp logo.png';
+import wifi_Image from '../User Image/wifi logo.png'
 
 function SMSQRCodeGenerator() {
   const phoneNumberRef = useRef(null);
   const messageRef = useRef(null);
   const logoInputRef = useRef(null);
+  var localLogoInputRef = useRef(null);
   const foregroundColorRef = useRef(null);
   const backgroundColorRef = useRef(null);
 
@@ -155,19 +162,19 @@ function SMSQRCodeGenerator() {
 
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
-  
+
 
   const generateSMSQRCode = () => {
     const phoneNumber = phoneNumberRef.current.value;
     const message = messageRef.current.value;
-    
+
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
     const qr_output = document.querySelector('.qu_div_image_generated');
 
 
-    if (!phoneNumber ) {
+    if (!phoneNumber) {
       setError('Please enter a Input.');
       return;
     }
@@ -182,7 +189,7 @@ function SMSQRCodeGenerator() {
 
     if (phoneNumber && message) {
       const smsText = `SMSTO:${phoneNumber}:${message}`;
-      
+
 
       const qr = new QRious({
         element: qr_output,
@@ -193,15 +200,15 @@ function SMSQRCodeGenerator() {
       });
 
       // Handle logo addition
-      if (logoInput.files.length > 0) {
-        const logoFile = logoInput.files[0];
+      if (logoInput.files.length > 0 || localLogoInputRef) {
+        const logoFile = logoInput.files[0] || localLogoInputRef;
         const reader = new FileReader();
 
-        reader.onload = function (e) {
-          const logoImage = new Image();
-          logoImage.src = e.target.result;
+        // reader.onload = function (e) {
+        //   const logoImage = new Image();
+        //   logoImage.src = e.target.result;
 
-          logoImage.onload = function () {
+          const handleLogoLoad = (logoImage) => {
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
 
@@ -229,9 +236,25 @@ function SMSQRCodeGenerator() {
             qr_output.src = canvas.toDataURL();
             SetDownloadImageName("sms");
           };
-        };
+          if (typeof logoFile === "string") {
+            // Assuming logoFile is a string URL
+            const logoImage = new Image();
+            logoImage.src = logoFile;
+            logoImage.onload = () => handleLogoLoad(logoImage);
+          } else {
+            // Assuming logoFile is a File or Blob
+            reader.onload = function (e) {
+              const logoImage = new Image();
+              logoImage.src = e.target.result;
+              logoImage.onload = () => handleLogoLoad(logoImage);
+            };
+            reader.readAsDataURL(logoFile);
+        
+            
+          }
+        // };
 
-        reader.readAsDataURL(logoFile);
+        // reader.readAsDataURL(logoFile);
 
 
 
@@ -254,9 +277,14 @@ function SMSQRCodeGenerator() {
     setColorAccordionOpen(!colorAccordionOpen);
   };
 
+  const SetLocalImage = (image) => {
+    // logoInputRef = null;
+    localLogoInputRef = image;
+  };
+
   return (
     <div className="container">
-    <h2  style={{marginRight: '11.50rem', marginTop: '0.78rem',}}>Sms QR Code Generator</h2>
+      <h2 style={{ marginRight: '11.50rem', marginTop: '0.78rem', }}>Sms QR Code Generator</h2>
       <label htmlFor="phoneNumber">Phone Call:</label>
       <input
         type="text"
@@ -265,7 +293,7 @@ function SMSQRCodeGenerator() {
         ref={phoneNumberRef}
         required
       />
-      {error && <div className="error-message" style={{color: 'red',}}>{error}</div>}
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <label htmlFor="message">Message:</label>
       <input
@@ -275,51 +303,52 @@ function SMSQRCodeGenerator() {
         ref={messageRef}
         required
       />
-      {error && <div className="error-message" style={{color: 'red',}}>{error}</div>}
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
-<div className='test_acc'>
+      <div className='test_acc'>
 
-    
-<div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleFileAccordion}>
-    <span ><i className={'far fa-image'}></i> Logo</span>
-    <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content">
-    <span>Or choose here logo</span>
-    <div className='grid-container'>
 
-      <div className='box-child'><img src={cancel_image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      
-    </div>
-    <div><img src=''></img></div>
-    <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
-    <input type="file" id="logoInput" ref={logoInputRef} />
-  </div>
-</div>
+        <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleFileAccordion}>
+            <span ><i className={'far fa-image'}></i> Logo</span>
+            <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <span>Or choose here logo</span>
+            <div className='grid-container'>
 
-{/* Accordion for Color Section */}
-<div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleColorAccordion}>
-    <span><i className={'fa fa-cog'}></i>Color</span>
-    <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content"> 
-    <label htmlFor="foregroundColor">Foreground Color:</label>
-    <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+              <div className='box-child' onClick={() => SetLocalImage(cancel_image)}><img src={cancel_image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(image)}><img src={image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Youtube_Image)}><img src={Youtube_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Email_Image)}><img src={Email_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(location_Image)}><img src={location_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(whatsapp_Image)}><img src={whatsapp_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(wifi_Image)}><img src={wifi_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Insta_Image)}><img src={Insta_Image}></img></div>
 
-    <label htmlFor="backgroundColor">Background Color:</label>
-    <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
-  </div>
-</div>
-</div>
+
+            </div>
+            <div><img src=''></img></div>
+            <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+            <input type="file" id="logoInput" ref={logoInputRef} />
+          </div>
+        </div>
+
+        {/* Accordion for Color Section */}
+        <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleColorAccordion}>
+            <span><i className={'fa fa-cog'}></i>Color</span>
+            <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <label htmlFor="foregroundColor">Foreground Color:</label>
+            <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+
+            <label htmlFor="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+          </div>
+        </div>
+      </div>
 
 
 
@@ -348,7 +377,7 @@ function SMSQRCodeGenerator() {
         ref={backgroundColorRef}
       /> */}
 
-      <button onClick={generateSMSQRCode}><i className='fa fa-plus' style={{marginRight: '0.78rem', fontWeight:'900',}}></i>Generate QR Code</button>
+      <button onClick={generateSMSQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
       {/* <div id="outputContainer">
         <div id="outputImageContainer">
           <img

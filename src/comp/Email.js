@@ -1,4 +1,4 @@
-import React, { useRef , useState} from 'react';
+import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import './Email.css'; // You can create a CSS file for styling
@@ -19,6 +19,7 @@ function EmailQRCodeGenerator() {
   const foregroundColorRef = useRef(null);
   const backgroundColorRef = useRef(null);
   const outputImageRef = useRef(null);
+  var localLogoInputRef = useRef(null);
 
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
@@ -47,15 +48,15 @@ function EmailQRCodeGenerator() {
       });
 
       // Handle logo addition
-      if (logoInput.files.length > 0) {
-        const logoFile = logoInput.files[0];
+      if (logoInput.files.length > 0 || localLogoInputRef) {
+        const logoFile = logoInput.files[0] || localLogoInputRef;
         const reader = new FileReader();
 
-        reader.onload = function (e) {
-          const logoImage = new Image();
-          logoImage.src = e.target.result;
+        // reader.onload = function (e) {
+        //   const logoImage = new Image();
+        //   logoImage.src = e.target.result;
 
-          logoImage.onload = function () {
+          const handleLogoLoad = (logoImage) => {
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
 
@@ -82,10 +83,25 @@ function EmailQRCodeGenerator() {
 
             qr_output.src = canvas.toDataURL();
           };
-        };
 
-        reader.readAsDataURL(logoFile);
-      }
+          if (typeof logoFile === "string") {
+            // Assuming logoFile is a string URL
+            const logoImage = new Image();
+            logoImage.src = logoFile;
+            logoImage.onload = () => handleLogoLoad(logoImage);
+          } else {
+            // Assuming logoFile is a File or Blob
+            reader.onload = function (e) {
+              const logoImage = new Image();
+              logoImage.src = e.target.result;
+              logoImage.onload = () => handleLogoLoad(logoImage);
+            };
+            reader.readAsDataURL(logoFile);
+
+        }
+
+        // reader.readAsDataURL(logoFile);
+      };
 
       SetDownloadImageName("email");
     }
@@ -99,9 +115,14 @@ function EmailQRCodeGenerator() {
     setColorAccordionOpen(!colorAccordionOpen);
   };
 
+  const SetLocalImage = (image) => {
+    // logoInputRef = null;
+    localLogoInputRef = image;
+  };
+
   return (
     <div className="container">
-      <h2 className="text-center" style={{marginRight: '20.50rem', marginTop: '0.78rem', fontWeight: '400',}}>Email QR Code </h2>
+      <h2 className="text-center" style={{ marginRight: '20.50rem', marginTop: '0.78rem', fontWeight: '400', }}>Email QR Code </h2>
       <label htmlFor="email">Email Address:</label>
       <input
         type="email"
@@ -125,51 +146,50 @@ function EmailQRCodeGenerator() {
         ref={messageRef}
       />
 
-<div className='test_acc'>
+      <div className='test_acc'>
 
-    
-<div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleFileAccordion}>
-    <span ><i className={'far fa-image'}></i> Logo</span>
-    <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content">
-    <span>Or choose here logo</span>
-    <div className='grid-container'>
 
-      <div className='box-child'><img src={cancel_image} alt='cancel-image'></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={Youtube_Image}></img></div>
-      <div className='box-child'><img src={Email_Image}></img></div>
-      <div className='box-child'><img src={location_Image}></img></div>
-      <div className='box-child'><img src={whatsapp_Image}></img></div>
-      <div className='box-child'><img src={wifi_Image}></img></div>
-      <div className='box-child'><img src={Insta_Image}></img></div>
-      
-    </div>
-    <div></div>
-    <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
-    <input type="file" id="logoInput" ref={logoInputRef} />
-  </div>
-</div>
+        <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleFileAccordion}>
+            <span ><i className={'far fa-image'}></i> Logo</span>
+            <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <span>Or choose here logo</span>
+            <div className='grid-container'>
 
-{/* Accordion for Color Section */}
-<div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleColorAccordion}>
-    <span><i className={'fa fa-cog'}></i>Color</span>
-    <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content"> 
-    <label htmlFor="foregroundColor">Foreground Color:</label>
-    <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+              <div className='box-child' onClick={() => SetLocalImage(cancel_image)}><img src={cancel_image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(image)}><img src={image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Youtube_Image)}><img src={Youtube_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Email_Image)}><img src={Email_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(location_Image)}><img src={location_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(whatsapp_Image)}><img src={whatsapp_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(wifi_Image)}><img src={wifi_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Insta_Image)}><img src={Insta_Image}></img></div>
+            </div>
+            <div></div>
+            <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+            <input type="file" id="logoInput" ref={logoInputRef} />
+          </div>
+        </div>
 
-    <label htmlFor="backgroundColor">Background Color:</label>
-    <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
-  </div>
-</div>
-</div>
+        {/* Accordion for Color Section */}
+        <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleColorAccordion}>
+            <span><i className={'fa fa-cog'}></i>Color</span>
+            <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <label htmlFor="foregroundColor">Foreground Color:</label>
+            <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
 
-      <button onClick={generateEmailQRCode}><i className='fa fa-plus' style={{marginRight: '0.78rem',fontWeight:'1000',}}></i>Generate QR Code</button>
+            <label htmlFor="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+          </div>
+        </div>
+      </div>
+
+      <button onClick={generateEmailQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '1000', }}></i>Generate QR Code</button>
       <div id="outputContainer">
         {/* Display the generated QR code image here */}
         {/* <div id="outputImageContainer">

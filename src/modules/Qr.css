@@ -16,7 +16,8 @@
     border-radius: 4px;
     align-items: center;
     justify-content: center;
-
+    padding-bottom: 1rem;
+    /* background-color: #2196F3; */
 }
 
 .output-div {
@@ -80,9 +81,10 @@
     align-items: center;
     justify-content: start;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 2rem;
+    margin-bottom: 7rem;
     max-width: 800px;
     margin-left: 10px;
+    /* background-color: ; */
 
 }
 

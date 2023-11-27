@@ -2,12 +2,19 @@ import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
-import image from '../User Image/06-vcard.png';
+import image from '../User Image/links image.png';
+import Youtube_Image from '../User Image/youtube.png';
+import Insta_Image from '../User Image/instagram (1).png';
+import Email_Image from '../User Image/email logo.png';
+import location_Image from '../User Image/location logo.png';
+import whatsapp_Image from '../User Image/whatsapp logo.png';
+import wifi_Image from '../User Image/wifi logo.png'
 
 function TextQRCodeGenerator() {
   const textRef = useRef(null);
   const outputImageRef = useRef(null);
   const logoInputRef = useRef(null);
+  var localLogoInputRef = useRef(null);
   const foregroundColorRef = useRef(null);
   const backgroundColorRef = useRef(null);
 
@@ -39,7 +46,7 @@ function TextQRCodeGenerator() {
     setError('');
 
     if (text) {
-      
+
 
       const qr = new QRious({
         element: qr_output,
@@ -48,19 +55,19 @@ function TextQRCodeGenerator() {
         foreground: foregroundColor,
         background: backgroundColor,
 
-        
+
       });
 
       // Handle logo addition
-      if (logoInput.files.length > 0) {
-        const logoFile = logoInput.files[0];
+      if (logoInput?.files?.length > 0 || localLogoInputRef) {
+        const logoFile = logoInput.files[0]  || localLogoInputRef;
         const reader = new FileReader();
 
-        reader.onload = function (e) {
-          const logoImage = new Image();
-          logoImage.src = e.target.result;
+        // reader.onload = function (e) {
+        //   const logoImage = new Image();
+        //   logoImage.src = e.target.result;
 
-          logoImage.onload = function () {
+          const handleLogoLoad = (logoImage) => {
             const canvas = document.createElement('canvas');
             const context = canvas.getContext('2d');
 
@@ -87,13 +94,31 @@ function TextQRCodeGenerator() {
 
             qr_output.src = canvas.toDataURL();
           };
+
+
+          if (typeof logoFile === "string") {
+            // Assuming logoFile is a string URL
+            const logoImage = new Image();
+            logoImage.src = logoFile;
+            logoImage.onload = () => handleLogoLoad(logoImage);
+          } else {
+            // Assuming logoFile is a File or Blob
+            reader.onload = function (e) {
+              const logoImage = new Image();
+              logoImage.src = e.target.result;
+              logoImage.onload = () => handleLogoLoad(logoImage);
+            };
+            reader.readAsDataURL(logoFile);
+        
+            
+          }
         };
 
-        reader.readAsDataURL(logoFile);
-      }
+        
 
       SetDownloadImageName("text");
     }
+    
   };
 
 
@@ -106,6 +131,11 @@ function TextQRCodeGenerator() {
     setColorAccordionOpen(!colorAccordionOpen);
   };
 
+  const SetLocalImage = (image) => {
+    // logoInputRef = null;
+    localLogoInputRef = image;
+  };
+
   return (
     <div className="container">
       <h2 className="text-center" style={{ marginRight: '12rem', marginTop: '0.78rem', }}>Text QR Code Generator</h2>
@@ -116,7 +146,7 @@ function TextQRCodeGenerator() {
         placeholder="Write your text here"
         ref={textRef}
       />
-      {error && <div className="error-message" style={{color: 'red',}}>{error}</div>}
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
       <div className='test_acc'>
 
 
@@ -129,14 +159,14 @@ function TextQRCodeGenerator() {
             <span>Or choose here logo</span>
             <div className='grid-container'>
 
-              <div className='box-child'><img src={cancel_image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(cancel_image)}><img src={cancel_image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(image)}><img src={image}></img></div>
+              <div className='box-child'onClick={() => SetLocalImage(Youtube_Image)}><img src={Youtube_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Email_Image)}><img src={Email_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(location_Image)}><img src={location_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(whatsapp_Image)}><img src={whatsapp_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(wifi_Image)}><img src={wifi_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Insta_Image)}><img src={Insta_Image}></img></div>
 
             </div>
             <div><img src=''></img></div>

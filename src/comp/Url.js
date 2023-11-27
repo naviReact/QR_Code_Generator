@@ -163,6 +163,8 @@ function QRCodeGenerator() {
 
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
+
+  
   const generateURLQRCode = () => {
     const url = urlRef.current.value;
 

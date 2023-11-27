@@ -17,7 +17,7 @@ input[type="color"] {
   /* max-width: 540px; */
   height: 100%;
   padding: 20px 20px;
-  border: 1px solid #CACACA;
+  border: 1px solid #CACACA; 
   margin: 5px 0;
   border-radius: 8px;
   color: #2A354F;
@@ -29,7 +29,7 @@ input[type="color"] {
 input[type="text"],
 [type="file"]:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  border-bottom-width: 2px;
+  
 }
 
 .container .generate_qr button {
