@@ -197,12 +197,13 @@
 }
 
 
-@media(max-width: 380px) {
+@media(min-width: 380px) and (max-width: 480px) {
     .qr-links-parent{
         /* background-color: #2196F3; */
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-left: 13rem;
+        /* font-size: 1.2rem;
+        font-weight: 700; */
+        /* margin-left: 1rem; */
+        grid-template-columns: repeat(2, 3fr);
         background-color: #2196F3;
     }
 }
