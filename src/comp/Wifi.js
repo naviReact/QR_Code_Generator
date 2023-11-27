@@ -22,6 +22,8 @@ function WifiQRCodeGenerator() {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const [error, setError] = useState('');
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -37,6 +39,21 @@ function WifiQRCodeGenerator() {
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+    const qr_output = document.querySelector('.qu_div_image_generated');
+
+
+    if (!ssid) {
+      setError('Please enter a Input field.');
+      return;
+    }
+
+    if (!qr_output) {
+      setError('QR code output element not found.');
+      return;
+    }
+
+    // Clear previous errors
+    setError('');
 
     if (ssid) {
       // Construct the WiFi network information
@@ -116,6 +133,8 @@ function WifiQRCodeGenerator() {
         ref={ssidRef}
         required
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
+
 
       <label htmlFor="password">Password:</label>
       <div className="password-input" >
@@ -127,6 +146,8 @@ function WifiQRCodeGenerator() {
           required
           style={{width: '537px', height: '50px',borderRadius: '8px', padding: '13.106px 12.006px 13.096px 11.996px', border: '1px solid #ccc',}}
         />
+        {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
+
         <button 
         style={{padding: '12px 25px', marginLeft : '1rem',}}
           className="show-hide-button"

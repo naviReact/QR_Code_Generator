@@ -24,6 +24,10 @@ function EmailQRCodeGenerator() {
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
+  // Error Text code
+
+  const [error, setError] = useState('');
+
   const generateEmailQRCode = () => {
     const email = emailRef.current.value;
     const subject = subjectRef.current.value;
@@ -32,6 +36,21 @@ function EmailQRCodeGenerator() {
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+    const qr_output = document.querySelector('.qu_div_image_generated');
+
+
+    if (!email) {
+        setError('Please enter a Input.');
+        return;
+      }
+  
+      if (!qr_output) {
+        setError('QR code output element not found.');
+        return;
+      }
+  
+      // Clear previous errors
+      setError('');
 
     if (email) {
       // Construct the email data with subject and message
@@ -46,6 +65,8 @@ function EmailQRCodeGenerator() {
         foreground: foregroundColor,
         background: backgroundColor,
       });
+
+      
 
       // Handle logo addition
       if (logoInput.files.length > 0 || localLogoInputRef) {
@@ -96,9 +117,9 @@ function EmailQRCodeGenerator() {
               logoImage.src = e.target.result;
               logoImage.onload = () => handleLogoLoad(logoImage);
             };
-            reader.readAsDataURL(logoFile);
 
-        }
+            // reader.readAsDataURL(logoFile);
+          }
 
         // reader.readAsDataURL(logoFile);
       };
@@ -130,6 +151,7 @@ function EmailQRCodeGenerator() {
         placeholder="Email Address"
         ref={emailRef}
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <label htmlFor="subject">Email Subject:</label>
       <input
@@ -138,6 +160,7 @@ function EmailQRCodeGenerator() {
         placeholder="Subject"
         ref={subjectRef}
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <label htmlFor="message">Email Message:</label>
       <textarea
@@ -145,6 +168,7 @@ function EmailQRCodeGenerator() {
         placeholder="Enter your message"
         ref={messageRef}
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <div className='test_acc'>
 

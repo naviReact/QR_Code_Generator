@@ -175,7 +175,7 @@ function SMSQRCodeGenerator() {
 
 
     if (!phoneNumber) {
-      setError('Please enter a Input.');
+      setError('Please enter a Input field.');
       return;
     }
 

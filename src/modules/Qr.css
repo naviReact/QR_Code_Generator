@@ -140,6 +140,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        /* background-color: #2196F3; */
     }
 
     .preview-continer {
@@ -149,6 +150,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        /* background-color: #2196F3; */
     }
 
     .preview {
@@ -176,5 +178,29 @@
 
     .qr-links-parent {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media(max-width: 550px) {
+    .qr-links-parent{
+        /* background-color: #2196F3; */
+        margin-left: 3rem;
+    }
+}
+
+@media(max-width: 436px) {
+    .qr-links-parent{
+        /* background-color: #2196F3; */
+        margin-left: 10rem;
+    }
+}
+
+
+@media(max-width: 380px) {
+    .qr-links-parent{
+        /* background-color: #2196F3; */
+        font-size: large    ;
+        margin-left: 15rem;
     }
 }

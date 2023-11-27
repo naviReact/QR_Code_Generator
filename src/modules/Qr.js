@@ -12,7 +12,7 @@ import ModInsta from "../comp/Insta";
 import ModFacebook from "../comp/Facebook";
 import ModWifi from "../comp/Wifi";
 import ModPayment from "../comp/Payment";
-// import ModPdf from '../comp/Pdf';
+import ModMore from '../comp/More';
 
 const menuItems = [
   { name: "Url", icon: "#", component: <ModUrl /> },
@@ -26,7 +26,7 @@ const menuItems = [
   { name: "Youtube", icon: "#", component: <ModYoutube /> },
   { name: "AppStore", icon: "#", component: <ModAppStore /> },
   { name: "Payment", icon: "#", component: <ModPayment /> },
-  // { name: "Pdf", icon: "#", component: <ModPdf/> },
+  { name: "More", icon: "#", component: <ModMore/> },
 ];
 
 var download_image_name = "hehehe";

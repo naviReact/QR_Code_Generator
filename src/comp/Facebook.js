@@ -20,12 +20,28 @@ function FacebookQRCodeGenerator() {
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
+  const [error, setError] = useState('');
+
   const generateFacebookQRCode = () => {
     const profileLink = profileLinkRef.current.value;
     const outputImage = outputImageRef.current;
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+    const qr_output = document.querySelector('.qu_div_image_generated');
+
+    if (!profileLink) {
+      setError('Please enter a Input.');
+      return;
+    }
+
+    if (!qr_output) {
+      setError('QR code output element not found.');
+      return;
+    }
+
+    // Clear previous errors
+    setError('');
 
     if (profileLink) {
       const facebookUrl = profileLink;
@@ -103,6 +119,8 @@ function FacebookQRCodeGenerator() {
         placeholder="Enter Facebook profile link"
         ref={profileLinkRef}
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
+
 
       <div className='test_acc'>
 
