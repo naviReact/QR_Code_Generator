@@ -1,4 +1,4 @@
-  .text-center {
+.text-center {
   /* margin-bottom: 20px; */
   white-space: nowrap;
 }
@@ -229,7 +229,7 @@ button:hover {
 
 @media (max-width: 420px) {
   .container {
-    margin-left: 12rem;
+    margin-left: 13rem;
 
   }
 
@@ -237,7 +237,7 @@ button:hover {
 
 }
 
-@media (max-width: 376px) {
+/* @media (max-width: 376px) {
   .container {
     margin-left: 15rem;
 
@@ -245,7 +245,7 @@ button:hover {
 
 
 
-}
+} */
 
 
 @media (min-width: 370px) and (max-width: 768px){

@@ -97,7 +97,7 @@ function AppStoreQRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{ marginRight: '11.50rem', marginTop: '0.78rem', fontWeight: '400', }}>App Store QR code</h2>
+      <h2 className="text-center" style={{ marginRight: '16rem', marginTop: '0.78rem', fontWeight: '400', }}>App Store QR code</h2>
       <label htmlFor="websiteUrl">App Store URL:</label>
       <input
         type="text"

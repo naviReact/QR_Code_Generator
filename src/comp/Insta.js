@@ -1,5 +1,5 @@
 import '../comp/Insta.css'; // You can create a CSS file for styling
-import React, { useRef , useState} from 'react';
+import React, { useRef, useState } from 'react';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
@@ -96,7 +96,7 @@ function InstagramQRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{marginRight: '11.50rem', marginTop: '0.78rem',}}>Instagram QR Code Generator</h2>
+      <h2 className="text-center" style={{ marginRight: '11.50rem', marginTop: '0.78rem', }}>Instagram QR Code Generator</h2>
       <label htmlFor="username">Instagram Username:</label>
       <input
         type="text"
@@ -105,52 +105,52 @@ function InstagramQRCodeGenerator() {
         ref={usernameRef}
       />
 
-<div className='test_acc'>
+      <div className='test_acc'>
 
 
-<div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleFileAccordion}>
-    <span ><i className={'far fa-image'}></i> Logo</span>
-    <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content">
-    <span>Or choose here logo</span>
-    <div className='grid-container'>
+        <div className={`accordion ${fileAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleFileAccordion}>
+            <span ><i className={'far fa-image'}></i> Logo</span>
+            <i className={`fa ${fileAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <span>Or choose here logo</span>
+            <div className='grid-container'>
 
-      <div className='box-child'><img src={cancel_image}></img></div>
-      <div className='box-child'><img src={image}></img></div>
-      <div className='box-child'><img src={Youtube_Image}></img></div>
-      <div className='box-child'><img src={Email_Image}></img></div>
-      <div className='box-child'><img src={location_Image}></img></div>
-      <div className='box-child'><img src={whatsapp_Image}></img></div>
-      <div className='box-child'><img src={wifi_Image}></img></div>
-      <div className='box-child'><img src={Insta_Image}></img></div>
+              <div className='box-child'><img src={cancel_image}></img></div>
+              <div className='box-child'><img src={image}></img></div>
+              <div className='box-child'><img src={Youtube_Image}></img></div>
+              <div className='box-child'><img src={Email_Image}></img></div>
+              <div className='box-child'><img src={location_Image}></img></div>
+              <div className='box-child'><img src={whatsapp_Image}></img></div>
+              <div className='box-child'><img src={wifi_Image}></img></div>
+              <div className='box-child'><img src={Insta_Image}></img></div>
 
-    </div>
-    <div></div>
-    <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
-    <input type="file" id="logoInput" ref={logoInputRef} />
-  </div>
-</div>
+            </div>
+            <div></div>
+            <label htmlFor="logoInput" className='choose-logo'>Choose Logo:</label>
+            <input type="file" id="logoInput" ref={logoInputRef} />
+          </div>
+        </div>
 
-{/* Accordion for Color Section */}
-<div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
-  <div className="accordion-header" onClick={toggleColorAccordion}>
-    <span><i className={'fa fa-cog'}></i>Color</span>
-    <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-  </div>
-  <div className="accordion-content">
-    <label htmlFor="foregroundColor">Foreground Color:</label>
-    <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
+        {/* Accordion for Color Section */}
+        <div className={`accordion ${colorAccordionOpen ? 'open' : ''}`}>
+          <div className="accordion-header" onClick={toggleColorAccordion}>
+            <span><i className={'fa fa-cog'}></i>Color</span>
+            <i className={`fa ${colorAccordionOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          </div>
+          <div className="accordion-content">
+            <label htmlFor="foregroundColor">Foreground Color:</label>
+            <input type="color" id="foregroundColor" defaultValue="#000000" ref={foregroundColorRef} />
 
-    <label htmlFor="backgroundColor">Background Color:</label>
-    <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
-  </div>
-</div>
-</div>
+            <label htmlFor="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" defaultValue="#ffffff" ref={backgroundColorRef} />
+          </div>
+        </div>
+      </div>
 
-      <button onClick={generateInstagramQRCode}><i className='fa fa-plus' style={{marginRight: '0.78rem', fontWeight:'900',}}></i>Generate QR Code</button>
-      
+      <button onClick={generateInstagramQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
+
     </div>
   );
 }

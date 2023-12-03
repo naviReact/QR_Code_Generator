@@ -102,7 +102,7 @@ END:VCARD`;
           logoImage.onload = () => handleLogoLoad(logoImage);
         };
 
-        // reader.readAsDataURL(logoFile);
+        reader.readAsDataURL(logoFile);
 
 
 

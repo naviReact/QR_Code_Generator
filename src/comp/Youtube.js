@@ -110,7 +110,7 @@ function YouTubeQRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{ marginRight: '11.50rem', marginTop: '0.78rem', }}>YouTube QR Code Generator</h2>
+      <h2 className="text-center" style={{ marginRight: '10rem', marginTop: '0.78rem', }}>YouTube QR Code Generator</h2>
       <label htmlFor="videoUrl">YouTube Video URL:</label>
       <input
         type="text"

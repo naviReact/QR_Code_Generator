@@ -88,12 +88,12 @@
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 580px){
   .premium-section{
     
-    max-width: 1500px;
+    max-width: 2000px;
     padding: 120px 12px;
-    background: #eee;
+    /* background: #eee; */
   }
 }
 
