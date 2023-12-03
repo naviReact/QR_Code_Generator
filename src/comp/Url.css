@@ -203,14 +203,19 @@ button:hover {
 }
 
 
-@media (max-width: 538px) {
+@media (max-width: 575px) {
   .container {
-    margin-left: 7rem;
+    margin-left: 9rem;
+    /* background-color: #84c45c; */
   }
 
 
 
+
+
 }
+
+
 
 @media (max-width: 450px) {
   .container {
@@ -240,4 +245,13 @@ button:hover {
 
 
 
+}
+
+
+@media (min-width: 370px) and (max-width: 768px){
+  .generate_qr{
+    width: 100%;
+    /* padding: 12px 23px; */
+    /* background-color: #2A354F; */
+  }
 }

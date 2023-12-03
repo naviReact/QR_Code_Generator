@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+// import '../comp/Payment.css'
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';

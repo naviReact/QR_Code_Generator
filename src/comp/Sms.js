@@ -145,7 +145,9 @@ import Insta_Image from '../User Image/instagram (1).png';
 import Email_Image from '../User Image/email logo.png';
 import location_Image from '../User Image/location logo.png';
 import whatsapp_Image from '../User Image/whatsapp logo.png';
-import wifi_Image from '../User Image/wifi logo.png'
+import wifi_Image from '../User Image/wifi logo.png';
+import Vcard from '../User Image/06-vcard.png';
+
 
 function SMSQRCodeGenerator() {
   const phoneNumberRef = useRef(null);
@@ -204,9 +206,7 @@ function SMSQRCodeGenerator() {
         const logoFile = logoInput.files[0] || localLogoInputRef;
         const reader = new FileReader();
 
-        // reader.onload = function (e) {
-        //   const logoImage = new Image();
-        //   logoImage.src = e.target.result;
+        
 
           const handleLogoLoad = (logoImage) => {
             const canvas = document.createElement('canvas');
@@ -252,9 +252,7 @@ function SMSQRCodeGenerator() {
         
             
           }
-        // };
-
-        // reader.readAsDataURL(logoFile);
+       
 
 
 
@@ -325,6 +323,7 @@ function SMSQRCodeGenerator() {
               <div className='box-child' onClick={() => SetLocalImage(whatsapp_Image)}><img src={whatsapp_Image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(wifi_Image)}><img src={wifi_Image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(Insta_Image)}><img src={Insta_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Vcard)}><img src={Vcard}></img></div>
 
 
             </div>

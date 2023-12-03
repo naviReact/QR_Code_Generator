@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import './Email.css';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import './Email.css'; // You can create a CSS file for styling
