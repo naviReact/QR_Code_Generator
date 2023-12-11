@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d45066c5.css",
+    "main.css": "/static/css/main.d7b325ac.css",
     "main.js": "/static/js/main.fc5b7b6d.js",
     "static/js/787.bf125a00.chunk.js": "/static/js/787.bf125a00.chunk.js",
     "static/media/undraw_Stripe_payments_re_chlm (1).png": "/static/media/undraw_Stripe_payments_re_chlm (1).d3850a8007ec778603b8.png",
@@ -13,12 +13,12 @@
     "static/media/instagram (1).png": "/static/media/instagram (1).a2c3fef272f2f4839084.png",
     "static/media/whatsapp logo.png": "/static/media/whatsapp logo.8fb909a63a98112aab95.png",
     "index.html": "/index.html",
-    "main.d45066c5.css.map": "/static/css/main.d45066c5.css.map",
+    "main.d7b325ac.css.map": "/static/css/main.d7b325ac.css.map",
     "main.fc5b7b6d.js.map": "/static/js/main.fc5b7b6d.js.map",
     "787.bf125a00.chunk.js.map": "/static/js/787.bf125a00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d45066c5.css",
+    "static/css/main.d7b325ac.css",
     "static/js/main.fc5b7b6d.js"
   ]
 }
