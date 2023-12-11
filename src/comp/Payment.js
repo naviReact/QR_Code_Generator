@@ -107,7 +107,7 @@ function PaymentQRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{marginRight: '11.50rem', marginTop: '0.78rem',}}>Payment QR Code Generator</h2>
+      <h2 className="text-center" style={{marginRight: '9rem', marginTop: '0.78rem',}}>Payment QR Code Generator</h2>
       <label htmlFor="merchantName">Merchant Name:</label>
       <input
         type="text"

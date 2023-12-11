@@ -8,3 +8,16 @@
       /* background-color: #2A354F; */
     }
   }
+
+  @media (max-width: 425px) {
+
+    .container h2,
+    label {
+      /* display: flex; */
+      /* margin: auto; */
+      flex-direction: column;
+      margin-right: 4rem;
+      /* background-color: red; */
+      /* background-color: #84c45c; */
+    }
+  }
