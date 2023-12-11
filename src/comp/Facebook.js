@@ -111,7 +111,7 @@ function FacebookQRCodeGenerator() {
 
   return (
     <div className="container">
-      <h2 className="text-center" style={{ marginRight: '11.50rem', marginTop: '0.78rem', }}>Facebook QR Code Generator</h2>
+      <h2 className="text-center" style={{ marginRight: '7rem', marginTop: '0.78rem', }}>Facebook QR Code Generator</h2>
       <label htmlFor="profileLink">Facebook Profile Link:</label>
       <input
         type="text"
