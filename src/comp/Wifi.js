@@ -107,7 +107,7 @@ function WifiQRCodeGenerator() {
           };
         };
 
-        reader.readAsDataURL(logoFile);
+        // reader.readAsDataURL(logoFile);
       }
 
       SetDownloadImageName("wifi");

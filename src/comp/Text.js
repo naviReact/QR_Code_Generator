@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import '../comp/Text.css';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
@@ -108,7 +109,8 @@ function TextQRCodeGenerator() {
               logoImage.src = e.target.result;
               logoImage.onload = () => handleLogoLoad(logoImage);
             };
-            reader.readAsDataURL(logoFile);
+
+            // reader.readAsDataURL(logoFile);
         
             
           }
@@ -161,7 +163,7 @@ function TextQRCodeGenerator() {
 
               <div className='box-child' onClick={() => SetLocalImage(cancel_image)}><img src={cancel_image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(image)}><img src={image}></img></div>
-              <div className='box-child'onClick={() => SetLocalImage(Youtube_Image)}><img src={Youtube_Image}></img></div>
+              <div className='box-child' onClick={() => SetLocalImage(Youtube_Image)}><img src={Youtube_Image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(Email_Image)}><img src={Email_Image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(location_Image)}><img src={location_Image}></img></div>
               <div className='box-child' onClick={() => SetLocalImage(whatsapp_Image)}><img src={whatsapp_Image}></img></div>
@@ -214,7 +216,7 @@ function TextQRCodeGenerator() {
         ref={backgroundColorRef}
       /> */}
 
-      <button onClick={generateTextQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
+      <button onClick={generateTextQRCode} className='generate_qr'><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
 
     </div>
   );

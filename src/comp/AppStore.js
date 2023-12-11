@@ -18,6 +18,9 @@ function AppStoreQRCodeGenerator() {
   const backgroundColorRef = useRef(null);
   const outputImageRef = useRef(null);
 
+
+  const [error, setError] = useState('');
+
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
@@ -28,9 +31,23 @@ function AppStoreQRCodeGenerator() {
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+    const qr_output = document.querySelector('.qu_div_image_generated');
+
+    if (!websiteUrl) {
+      setError('Please enter a input field!');
+      return;
+    }
+
+    if (!qr_output) {
+      setError('QR code output element not found.');
+      return;
+    }
+
+    // Clear previous errors
+    setError('');
 
     if (websiteUrl) {
-      const qr_output = document.querySelector('.qu_div_image_generated');
+      
 
       const qr = new QRious({
         element: qr_output,
@@ -105,6 +122,7 @@ function AppStoreQRCodeGenerator() {
         placeholder="Enter any link of google and Apple:"
         ref={websiteUrlRef}
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <div className='test_acc'>
 
@@ -150,7 +168,7 @@ function AppStoreQRCodeGenerator() {
         </div>
       </div>
 
-      <button onClick={generateWebsiteQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
+      <button onClick={generateWebsiteQRCode} className='generate_qr'><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
 
     </div>
   );

@@ -69,7 +69,6 @@
 
 
 .preview-continer {
-    width: 100%;
     background-color: white;
     padding: 40px;
     /* Use percentage or max-width */
@@ -176,7 +175,7 @@
         display: block;
         margin: auto;
         
-        /* background-color: #11ab7c; */
+        background-color: #11ab7c;
     }
 
     /* .preview-continer .test_qr_download {
@@ -190,9 +189,9 @@
 }
 
 
-@media(max-width: 575px) {
+@media(max-width: 550px) {
     .qr-links-parent{
-        background-color: #2196F3;
+        /* background-color: #2196F3; */
         margin-left: 3rem;
     }
 }

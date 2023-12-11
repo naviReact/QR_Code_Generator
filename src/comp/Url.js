@@ -245,9 +245,11 @@
               logoImage.onload = () => handleLogoLoad(logoImage);
             };
         
-            reader.readAsDataURL(logoFile);
+            // reader.readAsDataURL(logoFile);
           }
         }
+
+        SetDownloadImageName("Url");
         
 
 
@@ -310,46 +312,46 @@
                   className="box-child"
                   onClick={() => SetLocalImage(cancel_image)}
                 >
-                  <img src={cancel_image} alt=""></img>
+                  <img src={cancel_image} alt="cancel_image"></img>
                 </div>
                 <div className="box-child" onClick={() => SetLocalImage(image)}>
-                  <img src={image} alt=""></img>
+                  <img src={image} alt="link_image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(Youtube_Image)}
                 >
-                  <img src={Youtube_Image} alt=""></img>
+                  <img src={Youtube_Image} alt="Youtube_Image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(Email_Image)}
                 >
-                  <img src={Email_Image} alt=""></img>
+                  <img src={Email_Image} alt="Email_Image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(location_Image)}
                 >
-                  <img src={location_Image} alt=""></img>
+                  <img src={location_Image} alt="location_Image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(whatsapp_Image)}
                 >
-                  <img src={whatsapp_Image} alt=""></img>
+                  <img src={whatsapp_Image} alt="whatsapp_Image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(wifi_Image)}
                 >
-                  <img src={wifi_Image} alt=""></img>
+                  <img src={wifi_Image} alt="wifi_Image"></img>
                 </div>
                 <div
                   className="box-child"
                   onClick={() => SetLocalImage(Insta_Image)}
                 >
-                  <img src={Insta_Image} alt=""></img>
+                  <img src={Insta_Image} alt="Insta_Image"></img>
                 </div>
               </div>
               <div></div>

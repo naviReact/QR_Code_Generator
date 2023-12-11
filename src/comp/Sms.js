@@ -248,7 +248,7 @@ function SMSQRCodeGenerator() {
               logoImage.src = e.target.result;
               logoImage.onload = () => handleLogoLoad(logoImage);
             };
-            reader.readAsDataURL(logoFile);
+            // reader.readAsDataURL(logoFile);
         
             
           }
@@ -353,39 +353,10 @@ function SMSQRCodeGenerator() {
 
 
 
-      {/* <label htmlFor="logoInput">Choose Logo:</label>
-      <input
-        type="file"
-        id="logoInput"
-        ref={logoInputRef}
-      />
+      
 
-      <label htmlFor="foregroundColor">Foreground Color:</label>
-      <input
-        type="color"
-        id="foregroundColor"
-        defaultValue="#000000"
-        ref={foregroundColorRef}
-      />
-
-      <label htmlFor="backgroundColor">Background Color:</label>
-      <input
-        type="color"
-        id="backgroundColor"
-        defaultValue="#ffffff"
-        ref={backgroundColorRef}
-      /> */}
-
-      <button onClick={generateSMSQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
-      {/* <div id="outputContainer">
-        <div id="outputImageContainer">
-          <img
-            id="outputImage"
-            alt="QR Code"
-            ref={outputImageRef}
-          />
-        </div>
-      </div> */}
+      <button onClick={generateSMSQRCode} className='generate_qr'><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
+      
 
 
     </div>

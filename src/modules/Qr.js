@@ -55,7 +55,7 @@ const Qr = () => {
                 setCurrentComponentIndex(i);
               };
               return (
-                <div className="sub_menu_items" key={i} onClick={OnClick}>
+                <div className="sub_menu_items"  key={i} onClick={OnClick}>
                   {val.name}
                 </div>
               );

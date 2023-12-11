@@ -166,7 +166,7 @@ function FacebookQRCodeGenerator() {
         </div>
       </div>
 
-      <button onClick={generateFacebookQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
+      <button onClick={generateFacebookQRCode} className='generate_qr'><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '900', }}></i>Generate QR Code</button>
 
     </div>
   );

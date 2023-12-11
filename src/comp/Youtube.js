@@ -19,19 +19,36 @@ function YouTubeQRCodeGenerator() {
   const [fileAccordionOpen, setFileAccordionOpen] = useState(false);
   const [colorAccordionOpen, setColorAccordionOpen] = useState(false);
 
+  const [error, setError] = useState('');
+
 
   const generateYouTubeQRCode = () => {
     const videoUrl = videoUrlRef.current.value;
-
+    
     const logoInput = logoInputRef.current;
     const foregroundColor = foregroundColorRef.current.value;
     const backgroundColor = backgroundColorRef.current.value;
+    const qr_output = document.querySelector('.qu_div_image_generated');
+
+
+    if (!videoUrl) {
+      setError('Please enter a Youtube URL');
+      return;
+    }
+
+    if (!qr_output) {
+      setError('QR code output element not found.');
+      return;
+    }
+
+    // Clear previous errors
+    setError('');
 
     if (videoUrl) {
       // Construct the YouTube URL
       const youtubeUrl = `https://www.youtube.com/watch?v=${extractVideoId(videoUrl)}`;
 
-      const qr_output = document.querySelector('.qu_div_image_generated');
+      
 
       const qr = new QRious({
         element: qr_output,
@@ -119,6 +136,7 @@ function YouTubeQRCodeGenerator() {
         ref={videoUrlRef}
         required
       />
+      {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}
 
       <div className='test_acc'>
 

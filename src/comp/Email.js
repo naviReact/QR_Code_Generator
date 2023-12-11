@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Email.css';
+// import './Email.css';
 import QRious from 'qrious';
 import { SetDownloadImageName } from '../modules/Qr';
 import './Email.css'; // You can create a CSS file for styling
@@ -214,17 +214,8 @@ function EmailQRCodeGenerator() {
         </div>
       </div>
 
-      <button onClick={generateEmailQRCode}><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '1000', }}></i>Generate QR Code</button>
-      <div id="outputContainer">
-        {/* Display the generated QR code image here */}
-        {/* <div id="outputImageContainer">
-          <img
-            id="outputImage"
-            alt="QR Code"
-            ref={outputImageRef}
-          />
-        </div> */}
-      </div>
+      <button onClick={generateEmailQRCode} className='generate_qr'><i className='fa fa-plus' style={{ marginRight: '0.78rem', fontWeight: '1000', }}></i>Generate QR Code</button>
+      
     </div>
   );
 }
