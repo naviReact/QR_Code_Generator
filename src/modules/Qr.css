@@ -141,7 +141,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #2196F3;
+        /* background-color: #2196F3; */
     }
 
     .preview-continer {
@@ -176,7 +176,7 @@
         display: block;
         margin: auto;
         
-        background-color: #11ab7c;
+        /* background-color: #11ab7c; */
     }
 
     /* .preview-continer .test_qr_download {
@@ -190,9 +190,9 @@
 }
 
 
-@media(max-width: 550px) {
+@media(max-width: 575px) {
     .qr-links-parent{
-        /* background-color: #2196F3; */
+        background-color: #2196F3;
         margin-left: 3rem;
     }
 }
