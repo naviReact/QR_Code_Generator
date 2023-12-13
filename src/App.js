@@ -104,7 +104,7 @@ function Header() {
   };
   return (
     <div className="app_parent">
-      {/* <AppHeader></AppHeader> */}
+      <AppHeader></AppHeader>
       <Qr></Qr>
       {/* <HowToSection></HowToSection> */}
       {/* <QRwhat></QRwhat> */}
