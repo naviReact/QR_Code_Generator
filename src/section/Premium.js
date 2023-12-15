@@ -1,50 +1,32 @@
-
-
-
-
-import React from 'react';
-import './Premium.css';
-import imageSrc from '../Images/undraw_Stripe_payments_re_chlm (1).png';
+import React from "react";
+import "./Premium.css";
+import imageSrc from "../Images/undraw_Stripe_payments_re_chlm (1).png";
 
 function Premium() {
   return (
-    <section className="premium-section">
-      <div className="container">
-        <div className="row">
-          {/* Left side (container) */}
-          <div className="col-md-6">
-            <div>
-              <h2>Get more with Premium</h2>
-              <p>
-                Complete QR faster with batch file processing. Convert
-                scanned documents with OCR. E-sign your business agreements.
-              </p>
-            </div>
-            
-            {/* Get Premium Button (aligned to the left) */}
-            <div>
-              <a href="##" className="btn btn-primary">
-                Get Premium
-              </a>
-            </div>
+    <div className="premium-parent">
+      <div className="child-container">
+        <div className="title-section">
+          <div className="title-text">Get more with</div>
+          <div className="title-text">Premium</div>
+          <div className="title-description">
+            Complete QR faster with batch file processing. Convert scanned
+            documents with OCR. E-sign your business agreements.
           </div>
-
-          {/* Right side (image) */}
-          <div className="col-md-5">
-            <img
-              src={imageSrc}
-              alt="Get more with Premium"
-              className="premium-image"
-            />
+          <div className="premium-button-parent">
+            Get Premium
           </div>
         </div>
+        <div className="image-section">
+          <img
+            src={imageSrc}
+            alt="Get more with Premium"
+            className="premium-image"
+          />
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 
 export default Premium;
-
-
-
-
