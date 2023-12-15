@@ -16,6 +16,17 @@ function Premium() {
           <div className="premium-button-parent">
             Get Premium
           </div>
+          {/* Right side (image) */}
+          {/* <div className="col-md-5">
+            <img
+              src={imageSrc}
+              alt="Get more with Premium"
+              className="premium-image"
+            />
+
+            
+
+          </div> */}
         </div>
         <div className="image-section">
           <img
