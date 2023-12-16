@@ -5,7 +5,7 @@ import { SetDownloadImageName } from '../modules/Qr';
 import cancel_image from '../User Image/cancel_image.png';
 import image from '../User Image/chain.png';
 import Youtube_Image from '../User Image/youtube.png';
-import Insta_Image from '../User Image/instagram (1).png';
+import Insta_Image from '../User Image/06-vcard.png';
 import Email_Image from '../User Image/email logo.png';
 import location_Image from '../User Image/location logo.png';
 import whatsapp_Image from '../User Image/whatsapp logo.png';
@@ -150,14 +150,14 @@ function YouTubeQRCodeGenerator() {
             <span>Or choose here logo</span>
             <div className='grid-container'>
 
-              <div className='box-child'><img src={cancel_image}></img></div>
+              <div className='box-child'><img src={cancel_image} alt='cancel_image'></img></div>
               <div className='box-child'><img src={image}></img></div>
-              <div className='box-child'><img src={Youtube_Image}></img></div>
-              <div className='box-child'><img src={Email_Image}></img></div>
-              <div className='box-child'><img src={location_Image}></img></div>
-              <div className='box-child'><img src={whatsapp_Image}></img></div>
-              <div className='box-child'><img src={wifi_Image}></img></div>
-              <div className='box-child'><img src={Insta_Image}></img></div>
+              <div className='box-child'><img src={Youtube_Image} alt='Youtube_image'></img></div>
+              <div className='box-child'><img src={Email_Image} alt='Email_image'></img></div>
+              <div className='box-child'><img src={location_Image} alt='loaction_image'></img></div>
+              <div className='box-child'><img src={whatsapp_Image} alt='whatsapp_image'></img></div>
+              <div className='box-child'><img src={wifi_Image} alt='wifi_image'></img></div>
+              <div className='box-child'><img src={Insta_Image} alt='Insta_Image'></img></div>
 
             </div>
             <div></div>

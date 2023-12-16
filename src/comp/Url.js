@@ -146,7 +146,7 @@
   import cancel_image from "../User Image/cancel_image.png";
   import image from "../User Image/chain.png";
   import Youtube_Image from "../User Image/youtube.png";
-  import Insta_Image from "../User Image/instagram (1).png";
+  import Insta_Image from "../User Image/06-vcard.png";
   import Email_Image from "../User Image/email logo.png";
   import location_Image from "../User Image/location logo.png";
   import whatsapp_Image from "../User Image/whatsapp logo.png";

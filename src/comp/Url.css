@@ -23,6 +23,7 @@ input[type="color"] {
   color: #2A354F;
   /* display: flex; */
   flex-direction: column;
+  
 
 }
 
@@ -203,10 +204,17 @@ button:hover {
 }
 
 
+
+/* this code has been change it. */
 @media (max-width: 575px) {
   .container {
-    margin-left: 9rem;
-    /* background-color: #84c45c; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin-left: 9rem; */
+    
   }
 
 

@@ -15,7 +15,7 @@ import ModPayment from "../comp/Payment";
 import ModMore from '../comp/More';
 
 const menuItems = [
-  { name: "Url", icon: "#", component: <ModUrl /> },
+  { name: "Url", icon: "fas fa-link", component: <ModUrl /> },
   { name: "Text", icon: "#", component: <ModText /> },
   { name: "Sms", icon: "#", component: <ModSms /> },
   { name: "V-Card", icon: "#", component: <ModVcard /> },

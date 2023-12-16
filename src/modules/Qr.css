@@ -5,6 +5,7 @@
     flex-direction: row;
     margin-top: 20px;
     margin-bottom: 20px;
+    
     /* background: linear-gradient(to bottom, #175d69 23%, #330c43 95%); */
 
 }
@@ -12,6 +13,7 @@
 .container-qr {
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     background: rgb(243, 247, 250);
     border-radius: 4px;
     align-items: center;
@@ -47,6 +49,16 @@
     flex-direction: row;
     cursor: pointer;
 }
+
+/* .container-wrapper{
+    background-color: white;
+    max-width: 500px;
+    margin: 12px;
+} */
+
+
+
+
 
 .sub_menu_items {
     /* Add any styling you want for each grid item */
@@ -174,6 +186,7 @@
     }
     .preview img {
         display: block;
+        align-items: center;
         margin: auto;
         
         /* background-color: #11ab7c; */
@@ -192,7 +205,6 @@
 
 @media(max-width: 550px) {
     .qr-links-parent{
-        /* background-color: #2196F3; */
         margin-left: 3rem;
         
     }
@@ -221,10 +233,24 @@
 /* preview container problem slove */
 
 
-@media (max-width: 576px){
+@media (max-width: 577px){
     .preview-continer{
         max-width: 100%;
         padding: 12px;
         /* background-color: #11ab7c; */
+    }
+
+    .qr_parent{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        /* gap: 10px; */
+        /* background-color: #2196F3; */
+    }
+    .qr-links-parent {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
