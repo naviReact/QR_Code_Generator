@@ -1,16 +1,16 @@
-label .password_wifi{
-    font-weight: 500;
-    display: block;
-    margin-top: 10px;
+label .password_wifi {
+  font-weight: 500;
+  display: block;
+  margin-top: 10px;
 }
 
 
 
 
 
-input[type="text"],
-input[type="file"],
-input[type="color"] {
+.input_box_wifi[type="text"],
+.input_box_wifi[type="file"],
+.input_box_wifi[type="color"] {
   width: 100%;
   height: 100%;
   padding: 20px 20px;
@@ -25,16 +25,14 @@ input[type="color"] {
   color: #2A354F;
   /* color: #6b6b6b; */
 }
-input[type = "text"],[type = "file"]:focus{
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-    border-bottom-width: 2px;
-  }
-.password-input .show-hide-button{
-    padding: 5px 5px;
 
+.input_box_wifi[type="text"],
+[type="file"]:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  border-bottom-width: 2px;
 }
 
+.password-input .show-hide-button {
+  padding: 5px 5px;
 
-
-
-
+}

@@ -66,25 +66,25 @@
   gap: 5px;
 }
 
-.footer-col input {
+.footer-col {
   height: 40px;
   border-radius: 6px;
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #7489C6 ;
+  border: 1px solid #7489C6;
   caret-color: #4a4a4a;
   color: black;
   font-weight: 400;
   padding-left: 10px;
 }
 
-.footer-col input::placeholder {
+.footer-col ::placeholder {
   color: #4a4a4a;
 }
 
- .footer-col form button {
-  background: rgb(79,70,202);
+.footer-col form button {
+  background: rgb(79, 70, 202);
   color: #fff;
   outline: none;
   border: none;
@@ -96,7 +96,7 @@
 }
 
 .footer-col form button:hover {
-  background: rgb(69,56,202);
+  background: rgb(69, 56, 202);
 }
 
 .footer-col .icons {
@@ -107,12 +107,12 @@
 }
 
 .footer-col .icons i {
-    color: black;
+  color: black;
   /* color: #afb6c7; */
 }
 
-.footer-col .icons i:hover  {
-  color: rgb(69,77,202);
+.footer-col .icons i:hover {
+  color: rgb(69, 77, 202);
 }
 
 @media (max-width: 768px) {

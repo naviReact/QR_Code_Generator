@@ -1,53 +1,39 @@
-
-
-/* .container{
-  flex-wrap: wrap;
+.container {
+  display: flex;
   flex-direction: column;
-} */
-
-
-
+  width: 95%;
+}
 
 
 .text-center {
-  /* margin-bottom: 20px; */
-  white-space: nowrap;
+  font-size: 2rem;
 }
 
-label {
+.url_label {
   font-weight: 500;
-
-  display: block;
   margin-top: 10px;
 }
 
-input .input_URL[type="text"],
-input .input_URL[type="file"],
-input .input_URL[type="color"] {
-  /* display: flex; */
-  max-width: 100%;
-  /* max-width: 540px; */
-  height: 100%;
-  padding: 20px 20px;
-  border: 1px solid #CACACA; 
-  margin: 5px 0;
+.input_box_url[type="text"],
+.input_box_url[type="file"],
+.input_box_url[type="color"] {
+  border: 1px solid #CACACA;
   border-radius: 8px;
   color: #2A354F;
-  /* display: flex; */
   flex-direction: column;
-  
+  padding: 13.106px 12.006px 13.096px 11.996px;
+  border-radius: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
 
 }
 
-input[type="text"],
+.input_box_url[type="text"],
 [type="file"]:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  
 }
 
-.container .generate_qr button {
-  width: 100%;
-
+.generate_qr {
   background-color: #9cd375;
   color: white;
   border: none;
@@ -56,7 +42,7 @@ input[type="text"],
   cursor: pointer;
 }
 
-button:hover {
+.generate_qr:hover {
   background-color: #84c45c;
   transition: all 0.3s ease;
 
@@ -113,7 +99,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
 
 }
 
@@ -155,30 +141,30 @@ button:hover {
   display: block;
 }
 
-.accordion-content label{
+.accordion-content label {
   color: #2A354F;
   font-size: 16px;
   font-weight: 600;
 
 }
 
-.accordion-content .background_color{
+.accordion-content .background_color {
   width: 100%;
   height: 4vh;
   margin: auto;
   padding: 1px;
-  
+
 }
 
 
-.accordion-content  .Foreground_color{
+.accordion-content .Foreground_color {
   width: 100%;
   height: 4vh;
   margin: auto;
   padding: 1px;
   /* background-color: #2A354F; */
   /* padding: none; */
-  
+
 }
 
 
@@ -214,126 +200,13 @@ button:hover {
 
 
 
-@media (max-width: 774px) {
-
-  .container .generate_qr {
-    width: 100%;
-    /* border: none; */
-    /* background-color: #2A354F; */
-  }
-
-}
 
 @media (min-width: 360px) and (max-width: 614px) {
 
   .container h2,
   label {
-    /* display: flex; */
-    /* margin: auto; */
+
     flex-direction: column;
     margin-right: 4rem;
-    /* background-color: #84c45c; */
-  }
-}
-
-@media (max-width: 666px) {
-  .container {
-    margin-left: 2rem;
-  }
-}
-
-
-
-/* this code has been change it.
-@media (max-width: 575px) {
-  .container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    /* margin-left: 9rem; */
-    
-  /* }
-
-
-
-
-
-} */
-
-
-
-@media (max-width: 450px) {
-  .container {
-    margin-left: 9.20rem;
-    /* background-color: #84c45c; */
-  }
-
-
-
-}
-
-@media (max-width: 420px) {
-  .container {
-    margin-left: 13rem;
-
-  }
-
-
-
-}
-
-/* @media (max-width: 376px) {
-  .container {
-    margin-left: 15rem;
-
-  }
-
-
-
-} */
-
-/* this is additonal code of navi */
-
-/* @media (min-width: 370px) and (max-width: 578px){
-  input[type="text"],
-  input[type="file"],
-  input[type="color"] {
-
-    max-width: 460px;
-    flex-direction: column;
-    /* display: flex; */
-    /* background-color: #2A354F; */
-    
-    
-  
-  /* }
-  
-  .test_acc .accordion{
-    max-width: 460px;
-  }
-
-  button{
-    max-width: 470px;
-  }
-} */
-
-
-
-@media screen and (max-width: 768px) {
-  /* Adjust styles for screens larger than 768px */
-  .container {
-    max-width: 1000px;
-    /* background-color: #2A354F; */
-  }
-}
-
-
-@media (min-width: 370px) and (max-width: 768px){
-  .generate_qr{
-    width: 100%;
-    /* padding: 12px 23px; */
-    /* background-color: #2A354F; */
   }
 }

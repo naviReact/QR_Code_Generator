@@ -1,5 +1,3 @@
-
-
 h2 {
     margin-bottom: 20px;
 }
@@ -10,7 +8,7 @@ label {
     margin-top: 10px;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="file"],
 input[type="color"] {
     width: 90%;
@@ -20,13 +18,13 @@ input[type="color"] {
     margin: 5px 0;
     border-radius: 8px;
     color: #2A354F;
-}
+} */
 
-input[type="text"],
+/* input[type="text"],
 [type="file"]:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
     border-bottom-width: 2px;
-}
+} */
 
 .accordion {
     margin: 10px 0;
@@ -50,9 +48,13 @@ input[type="text"],
     padding: 10px;
 }
 
-.accordion-content input[type="color"] {
+.accordion-content {
     width: 100%;
 }
+
+/* .accordion-content input[type="color"] {
+    width: 100%;
+} */
 
 /* Hover effect for accordion content */
 .accordion-label:hover {

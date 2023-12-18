@@ -44,19 +44,18 @@ const Qr = () => {
   }, [currentComponentIndex]);
 
   // return<div>test code of sanjufasdklfjhaksdjhf kajsd<p/>hf kjahsdjkf hasdkjfh kasjdhf kajsdhfk jhfsad<p></p>/fj haksjdhf kajsd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kd<p></p>/fj haksjdhf kefhk</div>
-
   return (
     <div className="qr_parent">
       <div className="container-qr">
         <div className="container-wrapper">
           <div className="qr-links-parent">
-            {/* <i className='fa fa-link'></i> */}
+            {/* Menu Items button  */}
             {menuItems.map((val, i, self) => {
               const OnClick = () => {
                 setCurrentComponentIndex(i);
               };
               return (
-                <div className="sub_menu_items"  key={i} onClick={OnClick}>
+                <div className="sub_menu_items" key={i} onClick={OnClick}>
                   {val.name}
                 </div>
               );
@@ -67,12 +66,13 @@ const Qr = () => {
           {menuItems[currentComponentIndex].component}
         </div>
       </div>
-      <div className='preview'>
-        <div className='preview-continer'>
-
+      <div className="preview">
+        <div className="preview-continer">
           <img className="qu_div_image_generated" src={Image} alt="qr_code" />
-          <div className='test_qr_download'>
-            <div onClick={TEst_qu_Function} ><i className='fa fa-download'></i> Download QR code</div>
+          <div className="test_qr_download">
+            <div onClick={TEst_qu_Function}>
+              <i className="fa fa-download"></i> Download QR code
+            </div>
           </div>
         </div>
       </div>

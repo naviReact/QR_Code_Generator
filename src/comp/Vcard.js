@@ -138,31 +138,31 @@ END:VCARD`;
       <input type="text" id="name" ref={nameRef} placeholder="Name" required />
 
       <label htmlFor="lastName">Last Name:</label>
-      <input type="text" id="lastName" ref={lastNameRef} placeholder="Last Name" required />
+      <input className='input_box_v_card' type="text" id="lastName" ref={lastNameRef} placeholder="Last Name" required />
 
       <label htmlFor="email">Email:</label>
-      <input type="text" id="email" ref={emailRef} placeholder="your@example.com" required />
+      <input className='input_box_v_card'  type="text" id="email" ref={emailRef} placeholder="your@example.com" required />
 
       <label htmlFor="phone">Phone:</label>
-      <input type="text" id="phone" ref={phoneRef} placeholder="Phone" required />
+      <input className='input_box_v_card'  type="text" id="phone" ref={phoneRef} placeholder="Phone" required />
 
       <label htmlFor="company">Company:</label>
-      <input type="text" id="company" ref={companyRef} placeholder="Company" required />
+      <input className='input_box_v_card'  type="text" id="company" ref={companyRef} placeholder="Company" required />
 
       <label htmlFor="website">Website (URL):</label>
-      <input type="text" id="website" ref={websiteRef} placeholder="https://" />
+      <input className='input_box_v_card'  type="text" id="website" ref={websiteRef} placeholder="https://" />
 
       <label htmlFor="address">Address:</label>
-      <input type="text" id="address" ref={addressRef} placeholder="" required />
+      <input className='input_box_v_card'  type="text" id="address" ref={addressRef} placeholder="" required />
 
       <label htmlFor="city">City:</label>
-      <input type="text" id="city" ref={cityRef} placeholder="" />
+      <input className='input_box_v_card'  type="text" id="city" ref={cityRef} placeholder="" />
 
       <label htmlFor="postalCode">Postal Code:</label>
-      <input type="text" id="postalCode" ref={postalCodeRef} placeholder="" />
+      <input className='input_box_v_card'  type="text" id="postalCode" ref={postalCodeRef} placeholder="" />
 
       <label htmlFor="country">Country:</label>
-      <input type="text" id="country" ref={countryRef} placeholder="" />
+      <input className='input_box_v_card'  type="text" id="country" ref={countryRef} placeholder="" />
 
 
 

@@ -1,5 +1,3 @@
-
-
 h2 {
     font-weight: 400;
     margin-bottom: 20px;
@@ -10,15 +8,14 @@ label[for="email"] {
     margin-top: 10px;
 }
 
-input[type="email"],
-input[type="text"] {
+.input_box_email[type="email"],
+.input_box_email[type="text"] {
     width: 537.813px;
     height: 48.202px;
     padding: 13.106px 12.006px 13.096px 11.996px;
     border-radius: 8px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    
 }
 
 label[for="subject"],
@@ -85,10 +82,10 @@ button:hover {
     color: black;
 }
 
-@media (min-width: 370px) and (max-width: 768px){
-    .generate_qr{
-      width: 100%;
-      /* padding: 12px 23px; */
-      /* background-color: #2A354F; */
+@media (min-width: 370px) and (max-width: 768px) {
+    .generate_qr {
+        width: 100%;
+        /* padding: 12px 23px; */
+        /* background-color: #2A354F; */
     }
-  }
+}

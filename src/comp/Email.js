@@ -149,6 +149,7 @@ function EmailQRCodeGenerator() {
       <input
         type="email"
         id="email"
+        className='input_box_email'
         placeholder="Email Address"
         ref={emailRef}
       />
@@ -159,6 +160,7 @@ function EmailQRCodeGenerator() {
         type="text"
         id="subject"
         placeholder="Subject"
+        className='input_box_email'
         ref={subjectRef}
       />
       {error && <div className="error-message" style={{ color: 'red', }}>{error}</div>}

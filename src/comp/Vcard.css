@@ -11,9 +11,9 @@
     margin-top: 10px;
   }
   
-  input[type="text"],
-  input[type="file"],
-  input[type="color"] {
+  .input_box_v_card[type="text"],
+  .input_box_v_card[type="file"],
+  .input_box_v_card[type="color"] {
     width: 100%;
     height: 100%;
     padding: 0 200px;
@@ -26,7 +26,7 @@
     border-radius: 12px;
     /* color: #6b6b6b; */
   }
-  input[type = "text"],[type = "file"]:focus{
+  .input_box_v_card[type = "text"],[type = "file"]:focus{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
     border-bottom-width: 2px;
   }
