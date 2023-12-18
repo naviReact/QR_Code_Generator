@@ -278,6 +278,7 @@
         <input
           type="text"
           id="url"
+          className="input_URL"
           placeholder="https://"
           ref={urlRef}
           required
@@ -356,7 +357,7 @@
               <label htmlFor="logoInput" className="choose-logo">
                 Choose Logo:
               </label>
-              <input type="file" id="logoInput" ref={logoInputRef} />
+              <input type="file" id="logoInput" className="choose_logo" ref={logoInputRef} />
             </div>
           </div>
 
@@ -379,6 +380,7 @@
                 id="foregroundColor"
                 defaultValue="#000000"
                 ref={foregroundColorRef}
+                className="Foreground_color"
               />
 
               <label htmlFor="backgroundColor">Background Color:</label>
@@ -387,6 +389,7 @@
                 id="backgroundColor"
                 defaultValue="#ffffff"
                 ref={backgroundColorRef}
+                className="background_color"
               />
             </div>
           </div>

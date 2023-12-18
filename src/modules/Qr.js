@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import "./Qr.css";
+// import '../Media Quries/Global.css';
 import Image from "../Images/images.png";
 import ModSms from "../comp/Sms";
 import ModText from "../comp/Text";
@@ -12,7 +13,7 @@ import ModInsta from "../comp/Insta";
 import ModFacebook from "../comp/Facebook";
 import ModWifi from "../comp/Wifi";
 import ModPayment from "../comp/Payment";
-import ModMore from '../comp/More';
+// import ModMore from '../comp/More';
 
 const menuItems = [
   { name: "Url", icon: "fas fa-link", component: <ModUrl /> },
@@ -26,7 +27,7 @@ const menuItems = [
   { name: "Youtube", icon: "#", component: <ModYoutube /> },
   { name: "AppStore", icon: "#", component: <ModAppStore /> },
   { name: "Payment", icon: "#", component: <ModPayment /> },
-  { name: "More", icon: "#", component: <ModMore/> },
+  // { name: "More", icon: "#", component: <ModMore/> },
 ];
 
 var download_image_name = "hehehe";

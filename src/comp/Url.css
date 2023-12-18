@@ -1,3 +1,14 @@
+
+
+/* .container{
+  flex-wrap: wrap;
+  flex-direction: column;
+} */
+
+
+
+
+
 .text-center {
   /* margin-bottom: 20px; */
   white-space: nowrap;
@@ -10,9 +21,10 @@ label {
   margin-top: 10px;
 }
 
-input[type="text"],
-input[type="file"],
-input[type="color"] {
+input .input_URL[type="text"],
+input .input_URL[type="file"],
+input .input_URL[type="color"] {
+  /* display: flex; */
   max-width: 100%;
   /* max-width: 540px; */
   height: 100%;
@@ -88,7 +100,7 @@ button:hover {
   border: 1px solid #ddd;
   margin-bottom: 6px;
   overflow: hidden;
-  border-radius: 8px;
+  border-bottom-left-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
 
@@ -101,6 +113,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 
 }
 
@@ -140,6 +153,32 @@ button:hover {
 
 .accordion.open .accordion-content {
   display: block;
+}
+
+.accordion-content label{
+  color: #2A354F;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.accordion-content .background_color{
+  width: 100%;
+  height: 4vh;
+  margin: auto;
+  padding: 1px;
+  
+}
+
+
+.accordion-content  .Foreground_color{
+  width: 100%;
+  height: 4vh;
+  margin: auto;
+  padding: 1px;
+  /* background-color: #2A354F; */
+  /* padding: none; */
+  
 }
 
 
@@ -205,7 +244,7 @@ button:hover {
 
 
 
-/* this code has been change it. */
+/* this code has been change it.
 @media (max-width: 575px) {
   .container {
     display: grid;
@@ -215,13 +254,13 @@ button:hover {
     flex-direction: row;
     /* margin-left: 9rem; */
     
-  }
+  /* }
 
 
 
 
 
-}
+} */
 
 
 
@@ -254,6 +293,41 @@ button:hover {
 
 
 } */
+
+/* this is additonal code of navi */
+
+/* @media (min-width: 370px) and (max-width: 578px){
+  input[type="text"],
+  input[type="file"],
+  input[type="color"] {
+
+    max-width: 460px;
+    flex-direction: column;
+    /* display: flex; */
+    /* background-color: #2A354F; */
+    
+    
+  
+  /* }
+  
+  .test_acc .accordion{
+    max-width: 460px;
+  }
+
+  button{
+    max-width: 470px;
+  }
+} */
+
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for screens larger than 768px */
+  .container {
+    max-width: 1000px;
+    /* background-color: #2A354F; */
+  }
+}
 
 
 @media (min-width: 370px) and (max-width: 768px){

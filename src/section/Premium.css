@@ -88,7 +88,7 @@
   }
 }
 
-@media (min-width: 340px)   and (max-width: 580px){
+/* @media (min-width: 340px)   and (max-width: 580px){
   .premium-section{
     width: 100vw;
     /* heioght */
@@ -96,7 +96,7 @@
     /* max-width: 2000px; */
     
     /* background: #eee; */
-  }
+  /* }
 
   
-}
+} */

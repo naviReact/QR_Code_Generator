@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f3cda8f7.css",
-    "main.js": "/static/js/main.e35fbc22.js",
+    "main.css": "/static/css/main.47f53787.css",
+    "main.js": "/static/js/main.ca11b0b2.js",
     "static/js/787.bf125a00.chunk.js": "/static/js/787.bf125a00.chunk.js",
     "static/media/undraw_Stripe_payments_re_chlm (1).png": "/static/media/undraw_Stripe_payments_re_chlm (1).d3850a8007ec778603b8.png",
     "static/media/location logo.png": "/static/media/location logo.0c9d12e352cc00a22ae5.png",
@@ -12,12 +12,12 @@
     "static/media/instagram (1).png": "/static/media/instagram (1).a2c3fef272f2f4839084.png",
     "static/media/whatsapp logo.png": "/static/media/whatsapp logo.8fb909a63a98112aab95.png",
     "index.html": "/index.html",
-    "main.f3cda8f7.css.map": "/static/css/main.f3cda8f7.css.map",
-    "main.e35fbc22.js.map": "/static/js/main.e35fbc22.js.map",
+    "main.47f53787.css.map": "/static/css/main.47f53787.css.map",
+    "main.ca11b0b2.js.map": "/static/js/main.ca11b0b2.js.map",
     "787.bf125a00.chunk.js.map": "/static/js/787.bf125a00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3cda8f7.css",
-    "static/js/main.e35fbc22.js"
+    "static/css/main.47f53787.css",
+    "static/js/main.ca11b0b2.js"
   ]
 }
